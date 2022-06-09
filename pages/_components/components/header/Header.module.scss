@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+.Header {
+    display: flex;
+    justify-content: space-between;
+    width: 82%;
+    height: 100px;
+    align-items: center;
+    
+    .Nav {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+
+        a {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 23px;
+            text-align: center;
+
+            color: #FFFFFF;
+        }
+    }
+    .Contacts{
+        display: flex;
+        justify-content: center;
+        gap: 18px;
+        flex-wrap: nowrap;
+    }
+}
