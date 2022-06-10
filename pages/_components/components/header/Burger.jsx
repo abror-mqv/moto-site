@@ -45,6 +45,22 @@ const Burger = () => {
             <li>Контакты</li>
           </a>
           <div></div>
+          <a href="#" rel="noreferrer">
+            <Image src={Phone.src} alt="Контакты" width={30} height={30}/>
+            <li>Позвонить нам</li>
+          </a>
+          <a href="#" rel="noreferrer" className={nasway.WhatsApp}>
+            <Image src={WA.src} alt="Контакты" width={30} height={30}/>
+            <li>Написать в WhatsApp</li>
+          </a>
+          <a href="#" rel="noreferrer" >
+            <Image src={Location.src} alt="Контакты" width={30} height={30}/>
+            <li>Где мы находимся</li>
+          </a>
+          <a href="mailto:inbox@streetbike.ru" rel="noreferrer">
+            <Image src={Mail.src} alt="Контакты" width={30} height={30}/>
+            <li>inbox@streetbike.ru</li>
+          </a>
         </ul>
       </div>
     </nav>

@@ -88,8 +88,7 @@
   transform-origin: 0% 0%;
   transform: translate(100%, 0);
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
-  a{
-    
+  a{    
     display: flex;
     font-family: 'Roboto';
     font-style: normal;
@@ -100,12 +99,27 @@
     gap: 14px;
     margin: 0 0 32px 0;
   }
+  .WhatsApp{
+    width: 100%;
+    height: 56px;
+    background: linear-gradient(318.07deg, #68B551 10.19%, #3AB177 92.37%);
+    border-radius: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22.9283px;
+    line-height: 27px;
+    color: #FFFFFF;
+  }
   div{
     background-image: url('./headerIcons/Полоса.png');
     width: 100%;
     height: 2px;  
     background-size: cover;
-
+    margin-bottom: 32px;
   }
 }
 
