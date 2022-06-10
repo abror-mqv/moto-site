@@ -30,7 +30,11 @@
         gap: 18px;
         flex-wrap: nowrap;
     }
+    .suka{
+        background-color: aqua;
+    }
 }
+
 
 @media screen and (max-width: 920px){
     .Header{
@@ -40,5 +44,9 @@
         .Nav{
             display: none;
         }
+        .Burger{
+            display: block;
+        }
     }
+    
 }
