@@ -63,7 +63,6 @@
 .MenuToggle input:checked~span {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
-  background: #232323;
 }
 
 .MenuToggle input:checked~span:nth-last-child(3) {
@@ -79,10 +78,10 @@
   position: fixed;
   width: 108vw;
   height: 100vh;
-  margin: -100px 0 0 -83%;
+  margin: 10px 0 0 -83%;
   padding: 50px;
   padding-top: 125px;
-  background: #ededed;
+  background: #23262B;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   transform-origin: 0% 0%;
@@ -99,12 +98,12 @@
   transform: none;
 }
 
-.MenuToggle{
+.MenuToggle {
   display: none;
 }
 
-@media screen and (max-width: 920px){
-  .MenuToggle{
+@media screen and (max-width: 920px) {
+  .MenuToggle {
     display: block;
   }
 }
