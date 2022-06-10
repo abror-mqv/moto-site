@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
 .MenuToggle {
   display: block;
   position: relative;
@@ -13,7 +15,7 @@
 }
 
 .MenuToggle a:hover {
-  color: tomato;
+  color: #3AB177;
 }
 
 
@@ -78,21 +80,36 @@
   position: fixed;
   width: 108vw;
   height: 100vh;
-  margin: 10px 0 0 -83%;
-  padding: 50px;
-  padding-top: 125px;
+  margin: 10px 0 0 -86%;
+  padding: 53px 50px 0 50px;
   background: #23262B;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   transform-origin: 0% 0%;
   transform: translate(100%, 0);
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+  a{
+    
+    display: flex;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22.9283px;
+    line-height: 27px;
+    color: #82889A;
+    gap: 14px;
+    margin: 0 0 32px 0;
+  }
+  div{
+    background-image: url('./headerIcons/Полоса.png');
+    width: 100%;
+    height: 2px;  
+    background-size: cover;
+
+  }
 }
 
-.Menu li {
-  padding: 10px 0;
-  font-size: 22px;
-}
+
 
 .MenuToggle input:checked~ul {
   transform: none;

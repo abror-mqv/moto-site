@@ -12,6 +12,8 @@ import PlayCircle from './headerIcons/Play_Circle.svg'
 import UserSquare from './headerIcons/User_Square.svg'
 import WA from './headerIcons/WA.svg'
 
+import Line from './headerIcons/Полоса.png'
+
 const Burger = () => {
   return (
     <div>
@@ -22,22 +24,27 @@ const Burger = () => {
         <span></span>
         <span></span>
         <ul className={nasway.Menu}>
-          <a href="#">
+          <a href="#" rel="noreferrer">
             <Image src={BookOpen.src} alt="Услуги" width={30} height={30}/>
-            <li>Home</li>
+            <li>Услуги</li>
           </a>
-          <a href="#">
-            <li>About</li>
+          <a href="#" rel="noreferrer">
+            <Image src={Building.src} alt="Наш мотопарк" width={30} height={30}/>
+            <li>Наш мотопарк</li>
           </a>
-          <a href="#">
-            <li>Info</li>
+          <a href="#" rel="noreferrer">
+            <Image src={PlayCircle.src} alt="Блог и статьи" width={30} height={30}/>
+            <li>Блог и статьи</li>
           </a>
-          <a href="#">
-            <li>Contact</li>
+          <a href="#" rel="noreferrer">
+            <Image src={ImageIcon.src} alt="Галерея" width={30} height={30}/>
+            <li>Галерея</li>
           </a>
-          <a href="https://erikterwan.com/" target="_blank" rel="noreferrer">
-            <li>Show me more</li>
+          <a href="#" rel="noreferrer">
+            <Image src={UserSquare.src} alt="Контакты" width={30} height={30}/>
+            <li>Контакты</li>
           </a>
+          <div></div>
         </ul>
       </div>
     </nav>
