@@ -6,7 +6,8 @@
     width: 82%;
     height: 100px;
     align-items: center;
-    
+    margin-top: 8px;
+    gap: 50px;
     .Nav {
         display: flex;
         justify-content: center;
@@ -28,5 +29,16 @@
         justify-content: center;
         gap: 18px;
         flex-wrap: nowrap;
+    }
+}
+
+@media screen and (max-width: 920px){
+    .Header{
+        .Contacts{
+            display: none;
+        }
+        .Nav{
+            display: none;
+        }
     }
 }

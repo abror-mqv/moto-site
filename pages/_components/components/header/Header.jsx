@@ -22,6 +22,7 @@ const Header = () => {
                 <a href="#"><img src={MsgIcon.src} alt="Сообщение" /></a>
                 <a href="#"><img src={MessengerIcon.src} alt="Мессенджер" /></a>
             </ul>
+            
         </div>
     );
 };
