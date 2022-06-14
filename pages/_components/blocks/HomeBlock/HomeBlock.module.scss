@@ -1,9 +1,32 @@
 .HomeBlock{
     display: flex;
     flex-direction: row-reverse;
-    padding: 0 40px 40px 40px;
+    
     .ImgBlock{
-        width: 567px; 
-        height: 672px;
+     
+    }
+    .TxtBlock{
+        display: flex;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        .SgeinKotokbas{
+            max-width: 400px;
+            margin: 16px 0 40px 0;
+        }
+
+    }
+}
+
+@media  screen and (max-width: 920px) {
+    .HomeBlock{
+        flex-direction: column;
+        margin-top: 30px;
+        gap: 20px;
+        .TxtBlock{
+            button{
+                width: 100%;
+            }
+        }
     }
 }
