@@ -1,0 +1,38 @@
+.Motopark {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 33px;
+
+    .NasWayCircle {
+        margin-top: 90px;
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        position: absolute;
+        background: linear-gradient(318.07deg, #68B551 10.19%, #3AB177 92.37%);
+        transform: rotate(180deg);
+    }
+
+    .Content {
+        max-width: 100%;
+        padding: 62px 0 0 0;
+
+        .Swiper {
+            .SwiperSlide {
+                p{
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+@media screen and (max-width: 920px) {
+    .Motopark {
+        margin-top: 85px;
+    }
+}

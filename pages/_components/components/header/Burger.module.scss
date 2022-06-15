@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
 
-.BurgerBlock{
-    position: fixed;
-    z-index: 1;
-    margin-left: 78vw;
+.BurgerBlock {
+  position: fixed;
+  z-index: 1;
+  margin-left: 78vw;
 }
 
 .MenuToggle {
@@ -87,21 +87,19 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items:center;
+  align-items: center;
   width: 108vw;
-  height: 100vh;
-  margin: -72px 0 0 -92%;
-  padding: 53px 50px 0 50px;
+  height: 105vh;
+  margin: -85px 0 0 -92%;
+  padding: 42px 50px 0 50px;
   background: #23262B;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   transform-origin: 0% 0%;
   transform: translate(100%, 0);
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
-  ul{
-    width: 80%;
-  }
-  a{    
+ 
+  a {
     display: flex;
     font-family: 'Roboto';
     font-style: normal;
@@ -113,29 +111,52 @@
     margin: 0 0 32px 0;
     list-style: none;
   }
-  div{
+
+  ul {
+    width: 80%;
+  }
+
+  .WhatsApp {
+    width: 100%;
+    height: 56px;
+    padding: 0 0 0 10%;
+    background: linear-gradient(318.07deg, #68B551 10.19%, #3AB177 92.37%);
+    border-radius: 9px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22.9283px;
+    line-height: 27px;
+    color: #FFFFFF;
+    
+  }
+  .WhatsApp:hover{
+    transform: scale(102%);
+    color: #FFFFFF;
+  }
+
+  div {
     background-image: url('./headerIcons/Street.png');
     width: 105%;
-    height: 2px;  
+    height: 2px;
     background-size: cover;
     margin-bottom: 32px;
   }
 }
 
-.WhatsApp{
-  width: 100%;
-  height: 56px;
-  background: linear-gradient(318.07deg, #68B551 10.19%, #3AB177 92.37%);
-  border-radius: 9px;
+
+.UnderLogo{
+  margin-top: 47px !important;
+}
+
+.SecondLevelUl {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 22.9283px;
-  line-height: 27px;
-  color: #FFFFFF;
+  align-items: flex-start;
 }
 
 

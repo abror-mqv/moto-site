@@ -11,6 +11,7 @@ import Phone from "./headerIcons/Phone.svg";
 import PlayCircle from "./headerIcons/Play_Circle.svg";
 import UserSquare from "./headerIcons/User_Square.svg";
 import WA from "./headerIcons/WA.svg";
+import Logo from "../../assets/Logo.svg";
 
 import Line from "./headerIcons/Street.png";
 
@@ -23,9 +24,12 @@ const Burger = () => {
           <span></span>
           <span></span>
           <span></span>
+          
           <ul className={nasway.Menu}>
+          
             <ul>
-              <a href="#" rel="noreferrer">
+            <Image src={Logo.src} alt="Logo" width={198} height={47} className={nasway.BurgerLogo}/>
+              <a href="#" rel="noreferrer" className={nasway.UnderLogo}>
                 <Image src={BookOpen.src} alt="Услуги" width={30} height={30} />
                 <li>Услуги</li>
               </a>
@@ -68,16 +72,22 @@ const Burger = () => {
             </ul>
 
             <div></div>
-            <ul>
-              <a href="#" rel="noreferrer">
-                <Image src={Phone.src} alt="Контакты" width={30} height={30} />
-                <li>Позвонить нам</li>
-              </a>
-              <ul />
 
-              <a href="#" rel="noreferrer" className={nasway.WhatsApp}>
+              <ul>
+                <a href="#" rel="noreferrer">
+                  <Image
+                    src={Phone.src}
+                    alt="Контакты"
+                    width={30}
+                    height={30}
+                  />
+                  <li>Позвонить нам</li>
+                </a>
+              </ul>
+
+              <a href="https://wa.me/+996999109190" rel="noreferrer" className={nasway.WhatsApp}>
                 <Image src={WA.src} alt="Контакты" width={30} height={30} />
-                <li>Написать в WhatsApp</li>
+                Написать в WhatsApp
               </a>
 
               <ul>
@@ -95,7 +105,7 @@ const Burger = () => {
                   <li>inbox@streetbike.ru</li>
                 </a>
               </ul>
-            </ul>
+       
           </ul>
         </div>
       </nav>
