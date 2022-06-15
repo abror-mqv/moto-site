@@ -7,6 +7,7 @@ const Content = () => {
     return (
         <div className={nasway.Content}>
             <HomeBlock/>
+            <HomeBlock/>
             
         </div>
     );
