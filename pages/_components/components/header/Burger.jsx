@@ -2,18 +2,17 @@ import React from "react";
 import Image from "next/image";
 import nasway from "./Burger.module.scss";
 
-import BookOpen from "./headerIcons/Book_Open.svg";
-import Building from "./headerIcons/Building.svg";
-import ImageIcon from "./headerIcons/Image.svg";
-import Location from "./headerIcons/Location.svg";
-import Mail from "./headerIcons/Mail.svg";
-import Phone from "./headerIcons/Phone.svg";
-import PlayCircle from "./headerIcons/Play_Circle.svg";
-import UserSquare from "./headerIcons/User_Square.svg";
-import WA from "./headerIcons/WA.svg";
+import BookOpen from "./assets/Book_Open.svg";
+import Building from "./assets/Building.svg";
+import ImageIcon from "./assets/Image.svg";
+import Location from "./assets/Location.svg";
+import Mail from "./assets/Mail.svg";
+import Phone from "./assets/Phone.svg";
+import PlayCircle from "./assets/Play_Circle.svg";
+import UserSquare from "./assets/User_Square.svg";
+import WA from "./assets/WA.svg";
 import Logo from "../../assets/Logo.svg";
 
-import Line from "./headerIcons/Street.png";
 
 const Burger = () => {
   return (

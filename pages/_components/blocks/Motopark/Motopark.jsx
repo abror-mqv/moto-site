@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-key */
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import Image from "next/image";
 import nasway from "./Motopark.module.scss";
@@ -9,11 +9,10 @@ import SubText from "../../fabric/SubText/SubText";
 import Title from "../../fabric/Title/Title";
 import Cunt from "../../fabric/Cunt/Cunt";
 import RegButton from "../../fabric/RegularButton/RegButton";
-import useWindowSize from "./useWindowSize";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, EffectCoverflow, Navigation } from "swiper";
-import { useSwiper } from 'swiper/react';
+import { useSwiper } from "swiper/react";
 
 import "swiper/css/effect-coverflow";
 import "swiper/css";
@@ -23,6 +22,41 @@ import moto1 from "./assets/moto1.png";
 import moto2 from "./assets/moto2.png";
 import moto3 from "./assets/moto3.png";
 import moto4 from "./assets/moto4.png";
+
+
+function useWindowSize() {
+  // Initialize state with undefined width/height so server and client renders match
+  // Learn more here: https://joshwcomeau.com/react/the-perils-of-rehydration/
+  const [windowSize, setWindowSize] = useState({
+    width: undefined,
+    height: undefined,
+  });
+
+  useEffect(() => {
+    // only execute all the code below in client side
+    if (typeof window !== 'undefined') {
+      // Handler to call on window resize
+      function handleResize() {
+        // Set window width/height to state
+        setWindowSize({
+          width: window.innerWidth,
+          height: window.innerHeight,
+        });
+      }
+    
+      // Add event listener
+      window.addEventListener("resize", handleResize);
+     
+      // Call handler right away so state gets updated with initial window size
+      handleResize();
+    
+      // Remove event listener on cleanup
+      return () => window.removeEventListener("resize", handleResize);
+    }
+  }, []); // Empty array ensures that effect is only run on mount
+  return windowSize;
+}
+
 
 const motosList = [
   {
@@ -53,17 +87,15 @@ const motosList = [
 ];
 const Motopark = () => {
   const size = useWindowSize();
-  const [title, setTitle] = useState("")
-  
+  const [title, setTitle] = useState("");
+
   const renderList = motosList.map((moto) => {
     
     return (
       <SwiperSlide className={nasway.SwiperSlide}>
-        {({ isActive }) => 
-        
-        (
+        {({ isActive }) => (
           <>
-            {isActive? setTitle(title=>moto.title) : null}
+            {isActive ? setTitle((title) => moto.title) : null}
             <Image
               src={moto.media.src}
               alt={moto.title}
@@ -71,7 +103,7 @@ const Motopark = () => {
               height={281}
               className={isActive ? nasway.StockImage : nasway.GreyColoredImage}
             />
-            <Title content={moto.title}/>
+            <Title content={moto.title} />
             <SubText content={moto.description} />
           </>
         )}
@@ -93,15 +125,15 @@ const Motopark = () => {
           loop="true"
           modules={[Pagination]}
           slidesPerView={size.width >= 920 ? 3 : 1}
-          
         >
           {renderList}
         </Swiper>
-        <div>
+        <div className={nasway.underTag}>
+          <button onClick={() => swiper.slideNext()}>&#62;</button>
           <Title content={title} />
-          <button onClick={() => swiper.slideNext()}>Slide to the next slide</button>
+          <button onClick={() => swiper.slideNext()}>&#60;</button>
         </div>
-        
+
         <RegButton text="Подробнее" />
       </div>
     </section>
