@@ -13,3 +13,5 @@ export default function Home() {
     </main>
   )
 }
+
+// Изменения от санька
