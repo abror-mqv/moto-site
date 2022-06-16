@@ -21,7 +21,7 @@ const PhotoZone = () => {
       </center>
       <div className={nasway.PhotoZone}>
         <div className={nasway.ImageBlock}>
-          <Image src={MotoGirl.src} alt="dsdddd" width={672} height={567} />
+          <Image src={MotoGirl.src} alt="dsdddd" width={577} height={517} />
         </div>
 
         <div className={nasway.TxtBlock}>
