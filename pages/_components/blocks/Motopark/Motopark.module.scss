@@ -5,25 +5,80 @@
     margin-top: 33px;
 
     .NasWayCircle {
-        margin-top: 90px;
+        margin-top: 110px;
         width: 250px;
         height: 250px;
         border-radius: 50%;
         position: absolute;
-        background: linear-gradient(318.07deg, #68B551 10.19%, #3AB177 92.37%);
-        transform: rotate(180deg);
+        background: linear-gradient(138deg, #68B551 10.19%, #3AB177 92.37%);
     }
 
     .Content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        :global(.swiper-pagination) {
+            margin-bottom: 264px;
+
+        }
+
+        :global(.swiper-pagination-bullet) {
+            background: #82889A;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            opacity: 1;
+        }
+
+        :global(.swiper-pagination-bullet-active) {
+            background: linear-gradient(138deg, #68B551 10.19%, #3AB177 92.37%);
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            transition: 0.5s;
+        }
+
         max-width: 100%;
         padding: 62px 0 0 0;
 
         .Swiper {
+            width: 100%;
+
             .SwiperSlide {
-                p{
-                    margin-top: 15px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                
+                p {
+                    display: none;
+                    ;
+                }
+
+                div {
+                    margin-top: 43px;
+                }
+                .StockImage {
+                    transition: 0.5s;
+                }
+                .GreyColoredImage {
+                    -webkit-filter: grayscale(100%);
+                    /* Safari 6.0 - 9.0 */
+                    filter: grayscale(100%);
+                    transform: scale(70%);
+                    transition: 1s; 
                 }
             }
+
+            .swiper-pagination {
+                background-color: blue;
+            }
+        }
+
+        button {
+            margin-top: 40px;
+            width: 257px;
+            margin: 0 auto
         }
     }
 }
@@ -34,5 +89,53 @@
 @media screen and (max-width: 920px) {
     .Motopark {
         margin-top: 85px;
+    }
+
+    .Content {
+        :global(.swiper-pagination) {
+            margin-bottom: 264px;
+
+        }
+
+        :global(.swiper-pagination-bullet) {
+            background: #82889A;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            opacity: 1;
+        }
+
+        :global(.swiper-pagination-bullet-active) {
+            background: linear-gradient(138deg, #68B551 10.19%, #3AB177 92.37%);
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            transition: 1s;
+        }
+
+        max-width: 100%;
+        padding: 62px 0 0 0;
+
+        .Swiper {
+            .SwiperSlide {
+                p {
+                    margin-top: 15px;
+                }
+
+                div {
+                    margin-top: 43px;
+                }
+
+            }
+
+            .swiper-pagination {
+                background-color: blue;
+            }
+        }
+
+        button {
+            margin-top: 40px;
+            width: 100%;
+        }
     }
 }
