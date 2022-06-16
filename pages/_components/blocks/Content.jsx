@@ -4,6 +4,7 @@ import nasway from './Content.module.scss'
 import HomeBlock from './HomeBlock/HomeBlock';
 import Motopark from './Motopark/Motopark';
 import PhotoZone from './PhotoZone/PhotoZone';
+import Documents from './Documents/Documents';
 
 const Content = () => {
     return (
@@ -12,6 +13,8 @@ const Content = () => {
             <Motopark/>   
               {/* Arrmor_Zone */}
               <PhotoZone/>
+              <Documents/>
+              
 
 
         </div>
