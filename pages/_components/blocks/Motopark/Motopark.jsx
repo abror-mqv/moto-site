@@ -51,7 +51,6 @@ const motosList = [
     media: moto4,
   },
 ];
-const swiper = useSwiper();
 const Motopark = () => {
   const size = useWindowSize();
   const [title, setTitle] = useState("")
