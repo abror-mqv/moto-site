@@ -74,6 +74,13 @@ const motosList = [
   },
 ];
 const Motopark = () => {
+  
+  useEffect(()=> {
+    window.addEventListener('resize', ()=> {
+        console.log(window.innerHeight, window.innerWidth)
+    })
+  }, [])
+
   const size = useWindowSize();
   const [title, setTitle] = useState("");
 
