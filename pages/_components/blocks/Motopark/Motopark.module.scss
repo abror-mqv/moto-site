@@ -52,11 +52,12 @@
                 
                 p {
                     display: none;
-                    ;
+                    
                 }
 
                 div {
                     margin-top: 43px;
+                    display: none;
                 }
                 .StockImage {
                     transition: 0.5s;
@@ -123,7 +124,7 @@
                 }
 
                 div {
-                    margin-top: 43px;
+                    display: block;
                 }
 
             }

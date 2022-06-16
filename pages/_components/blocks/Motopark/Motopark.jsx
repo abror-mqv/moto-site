@@ -12,8 +12,8 @@ import RegButton from "../../fabric/RegularButton/RegButton";
 import useWindowSize from "./useWindowSize";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, EffectCoverflow } from "swiper";
-import { useSwiperSlide } from 'swiper/react';
+import { Pagination, EffectCoverflow, Navigation } from "swiper";
+import { useSwiper } from 'swiper/react';
 
 import "swiper/css/effect-coverflow";
 import "swiper/css";
@@ -32,7 +32,8 @@ const motosList = [
     media: moto1,
   },
   {
-    title: "BSE 190",
+    title: "НАСВАЙ",
+    // title: "BSE 190",
     description:
       "Здесь должен быть какой то целевой текст который описывает класс техники и рассказывает кому и зачем подойдёт именно этот мотоцикл, коротко, ясно, простым языком, чтобы клиент понимал зачем.",
     media: moto2,
@@ -50,18 +51,20 @@ const motosList = [
     media: moto4,
   },
 ];
-
+const swiper = useSwiper();
 const Motopark = () => {
   const size = useWindowSize();
-  const swiperSlide = useSwiperSlide(); 
-  const [title, setTitle] = useState(false)
-
+  const [title, setTitle] = useState("")
+  
   const renderList = motosList.map((moto) => {
     
     return (
       <SwiperSlide className={nasway.SwiperSlide}>
-        {({ isActive }) => (
+        {({ isActive }) => 
+        
+        (
           <>
+            {isActive? setTitle(title=>moto.title) : null}
             <Image
               src={moto.media.src}
               alt={moto.title}
@@ -69,7 +72,7 @@ const Motopark = () => {
               height={281}
               className={isActive ? nasway.StockImage : nasway.GreyColoredImage}
             />
-            
+            <Title content={moto.title}/>
             <SubText content={moto.description} />
           </>
         )}
@@ -91,11 +94,13 @@ const Motopark = () => {
           loop="true"
           modules={[Pagination]}
           slidesPerView={size.width >= 920 ? 3 : 1}
+          
         >
           {renderList}
         </Swiper>
         <div>
           <Title content={title} />
+          <button onClick={() => swiper.slideNext()}>Slide to the next slide</button>
         </div>
         
         <RegButton text="Подробнее" />
