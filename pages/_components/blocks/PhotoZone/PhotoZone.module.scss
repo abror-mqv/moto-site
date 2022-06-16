@@ -1,0 +1,46 @@
+
+.PhotoZone{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .ImgBlock{
+     
+    }
+    .TxtBlock{
+        display: flex;
+        justify-content: center;
+        // display: flex; // в стилях HomePage стоит два дисплея
+        flex-direction: column;
+        .SgeinKotokbas{
+            max-width: 400px;
+            margin: 16px 0 40px 0;
+        }
+
+    }
+    // Добавил пару классав в титульном описании чтобы они слились а не переносились на след стрраничку
+    .TxtBlock2{
+        display: flex;        
+        flex-wrap: wrap;
+    }
+    .TxtBlock2  h3{
+        margin-right: 15px;
+    }
+    
+}
+.center{ 
+    // Добавлен отступ через див чтобы не сливался с верхней ячейкой это титуль "ФотоПарк"
+    margin: 50px;
+}
+
+@media  screen and (max-width: 920px) {
+    .PhotoZone{
+        flex-direction: column;
+        margin-top: 30px;
+        gap: 20px;
+        .TxtBlock{
+            button{
+                width: 100%;
+            }
+        }
+    }
+}
