@@ -41,21 +41,19 @@
 
         max-width: 100%;
         padding: 62px 0 0 0;
-        .underTag{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-width: 400px;    
-            button{
-                width: 30px;
-                height: 30px;
-                background: linear-gradient(138deg, #68B551 10.19%, #3AB177 92.37%);
-                border-radius: 50%;
-            }
-        }
+        
         .Swiper {
             width: 100%;
-
+            .underTag{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                div{
+                    min-width: 400px;
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
             .SwiperSlide {
                 display: flex;
                 flex-direction: column;
@@ -87,11 +85,11 @@
             }
         }
 
-        button {
-            margin-top: 40px;
-            width: 257px;
-            margin: 0 auto
-        }
+        // button {
+        //     margin-top: 40px;
+        //     width: 257px;
+        //     margin: 0 auto
+        // }
     }
 }
 

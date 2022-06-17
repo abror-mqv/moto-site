@@ -9,6 +9,8 @@ import SubText from "../../fabric/SubText/SubText";
 import Title from "../../fabric/Title/Title";
 import Cunt from "../../fabric/Cunt/Cunt";
 import RegButton from "../../fabric/RegularButton/RegButton";
+import SwiperButtonNext from "../../fabric/SwiperButton/SwiperButtonNext";
+import SwiperButtonPrevious from "../../fabric/SwiperButton/SwiperButtonPrevious";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, EffectCoverflow, Navigation } from "swiper";
@@ -23,14 +25,13 @@ import moto2 from "./assets/moto2.png";
 import moto3 from "./assets/moto3.png";
 import moto4 from "./assets/moto4.png";
 
-
 function useWindowSize() {
   const [windowSize, setWindowSize] = useState({
     width: undefined,
     height: undefined,
   });
   useEffect(() => {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       function handleResize() {
         setWindowSize({
           width: window.innerWidth,
@@ -44,7 +45,6 @@ function useWindowSize() {
   }, []);
   return windowSize;
 }
-
 
 const motosList = [
   {
@@ -74,18 +74,17 @@ const motosList = [
   },
 ];
 const Motopark = () => {
-  
-  useEffect(()=> {
-    window.addEventListener('resize', ()=> {
-        console.log(window.innerHeight, window.innerWidth)
-    })
-  }, [])
+  const swiper = useSwiper();
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      console.log(window.innerHeight, window.innerWidth);
+    });
+  }, []);
 
   const size = useWindowSize();
   const [title, setTitle] = useState("");
 
   const renderList = motosList.map((moto) => {
-    
     return (
       <SwiperSlide className={nasway.SwiperSlide}>
         {({ isActive }) => (
@@ -122,12 +121,14 @@ const Motopark = () => {
           slidesPerView={size.width >= 920 ? 3 : 1}
         >
           {renderList}
+          <div className={nasway.underTag}>
+            <div>
+              <SwiperButtonPrevious>Prev</SwiperButtonPrevious>
+              <Title content={title} />
+              <SwiperButtonNext>Next</SwiperButtonNext>
+            </div>
+          </div>
         </Swiper>
-        <div className={nasway.underTag}>
-          <button onClick={() => swiper.slideNext()}>&#62;</button>
-          <Title content={title} />
-          <button onClick={() => swiper.slideNext()}>&#60;</button>
-        </div>
 
         <RegButton text="Подробнее" />
       </div>
