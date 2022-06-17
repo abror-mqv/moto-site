@@ -1,0 +1,70 @@
+.Error404{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    border-radius: 20px;
+    align-items: center;
+    gap: 100px;
+    padding-top: 85px;
+
+    .ImgBlock{
+        position: absolute;     
+    }
+   
+    
+    .TxtBlock{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+
+        .SgeinKotokbas{
+            max-width: 400px;
+            margin: 16px 0 40px 0;
+            font-size: 25px;
+
+            width: 379px;
+            height: 87px;
+            
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 25px;
+            line-height: 29px;
+            text-align: center;
+        }
+    }
+}
+
+
+@media  screen and (max-width: 920px) {
+    .Error404{
+        flex-direction: column;
+        gap: 10px;
+        padding-top: 0px;
+        .TxtBlock{
+            text-align: center;
+
+            .SgeinKotokbas{
+                max-width: 400px;
+                margin: 10px 0 15px 0;
+                font-size: 25px;
+                width: 379px;
+                height: 60px;
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 300;
+                font-size: 25px;
+                line-height: 29px;
+                text-align: center;
+            }
+
+            button{
+                width: 100%;
+                margin-bottom: 100px;
+            }
+        }
+    }
+}
+

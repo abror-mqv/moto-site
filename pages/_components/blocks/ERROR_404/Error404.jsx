@@ -1,10 +1,10 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import nasway from './Questions.module.scss'
+import nasway from './Error404.module.scss'
 import Title from '../../fabric/Title/Title';
 
-import MotoQuestion from './MotoQuestions.png'
-import MotoQuestion2 from './MotoQuestions2.png'
+import Error404Big from './Error404_BigScreen.png'
+import Error404Small from './Error404_SmallScreen.png'
 import SubText from '../../fabric/SubText/SubText';
 import RegButton from '../../fabric/RegularButton/RegButton';
 import Image from 'next/image';
@@ -30,32 +30,38 @@ function useWindowSize() {
     return windowSize;
   }
 
-const Questions = () => {      
+const Error404 = () => {   
     
     const size = useWindowSize();
     return (
-        <div className={nasway.Questions}>
+        <div className={nasway.Error404}>
 
             <div className={nasway.ImageBlock}>
-                  <Image src={size.width >= 920 ? MotoQuestion.src : MotoQuestion2.src} alt="dsdddd" width={672} height={567}/>
+                  <Image src={size.width >= 920 ? Error404Big.src : Error404Small.src}
+                         alt="dsdddd" width={size.width >= 920 ? 569 : 372}
+                         height={size.width >= 920 ? 557 : 364}/>
             </div>    
 
+            
+
             <div className={nasway.TxtBlock}>
+                  <Title biggreen content="404"/>
+                  <Title content="СТРАНИЦА НЕ СУЩЕСТВУЕТ"/>
 
-                  <Title black content="ОСТАЛИСЬ ВОПРОСЫ?"/>
+                {/* <div></div> */}
 
-                <div></div>
-
+                <center>
                <div className={nasway.SgeinKotokbas}>
-                  <SubText content="Оставьте заявку на бесплатную консультацию. Мы перезвоним Вам в течение 15 минут!"/>
+                  <SubText errorwhite content="На карте нашего сайта нет такой страинцы, но есть много других!"/>
                </div>
+               </center>
 
-               <div>
-                  <RegButton GreyStyle text="ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ"/>
-               </div>
+               <center>
+                  <RegButton text="ВЕРНУТЬСЯ НА ГЛАВНУЮ"/>
+               </center>
             </div>
         </div>
     );
 };
 
-export default Questions;
+export default Error404;

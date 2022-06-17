@@ -31,3 +31,31 @@
     line-height: 47px;
     color: rgb(0, 0, 0);
 }
+
+.biggreen{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 800;
+
+    font-size: 156px;
+    height: 150px;
+    padding: 58px;
+    text-align: center;
+
+
+    line-height: 47px;
+    background: linear-gradient(318.07deg, #68B551 10.19%, #3AB177 92.37%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;   
+}
+
+.errorwhite{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 47px;
+    color: #fff;
+}

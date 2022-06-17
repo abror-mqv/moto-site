@@ -12,8 +12,7 @@
     padding: 40px;
 
     .ImgBlock{
-        position: absolute;
-     
+        position: absolute;     
     }
    
     
@@ -23,12 +22,10 @@
         display: flex;
         flex-direction: column;
 
-
         .SgeinKotokbas{
             max-width: 400px;
             margin: 16px 0 40px 0;
         }
-
     }
 }
 
@@ -50,8 +47,7 @@
         .ImgBlock{
             position: absolute;
          
-        }
-       
+        }       
         
         .TxtBlock{
             display: flex;
@@ -63,14 +59,13 @@
                 font-size: 15px;
                 margin-top: -30px;
             }
+
             .SgeinKotokbas{
                 max-width: 400px;
                 margin: 16px 0 40px 0;
-            }
-    
+            }    
         }
-    }
-   
+    }   
 }
 
 
@@ -80,6 +75,7 @@
         margin-top: 30px;
         gap: 20px;
         background: none;
+
         .TxtBlock{
             background: linear-gradient(318.07deg, #68B551 10.19%, #3AB177 92.37%);
             padding: 40px;
