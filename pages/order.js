@@ -6,7 +6,10 @@ import Header from './_components/components/header/Header';
 const order = () => {
     return (
         <div className={styles.Order} >
+            <div className={styles.headerVisible}>
             <Header/>
+            </div>
+            
             <Order/>
         </div>
     );
