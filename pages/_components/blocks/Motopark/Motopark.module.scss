@@ -17,28 +17,6 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-
-        :global(.swiper-pagination) {
-            margin-bottom: 264px;
-
-        }
-
-        :global(.swiper-pagination-bullet) {
-            background: #82889A;
-            width: 15px;
-            height: 15px;
-            border-radius: 50%;
-            opacity: 1;
-        }
-
-        :global(.swiper-pagination-bullet-active) {
-            background: linear-gradient(138deg, #68B551 10.19%, #3AB177 92.37%);
-            width: 15px;
-            height: 15px;
-            border-radius: 50%;
-            transition: 0.5s;
-        }
-
         max-width: 100%;
         padding: 62px 0 0 0;
         
@@ -61,7 +39,7 @@
                         /* Safari 6.0 - 9.0 */
                         filter: grayscale(40%);
                         transform: scale(104%);
-                        
+
                         transition: 0.1s; 
                     }
                 }
@@ -115,7 +93,8 @@
 
     .Content {
         :global(.swiper-pagination) {
-            margin-bottom: 264px;
+            margin: 0 0 -10px 0  !important;
+            top: 275px;
 
         }
 
@@ -140,16 +119,22 @@
 
         .Swiper {
             .SwiperSlide {
+                justify-content: flex-start;
                 p {
                     margin-top: 15px;
+                    display: block !important;
                 }
 
                 div {
-                    display: block;
+                    display: block !important;
+                    width: 100%;
+
                 }
 
             }
-
+            .underTag{
+                display: none !important; 
+            }
             .swiper-pagination {
                 background-color: blue;
             }
