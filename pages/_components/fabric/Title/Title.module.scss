@@ -32,6 +32,17 @@
     color: rgb(0, 0, 0);
 }
 
+@media  screen and (max-width: 920px) {
+    .black{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 800;
+        font-size: 36px;
+        line-height: 47px;
+        color: rgb(0, 0, 0);
+    }
+}
+
 .biggreen{
     font-family: 'Roboto';
     font-style: normal;

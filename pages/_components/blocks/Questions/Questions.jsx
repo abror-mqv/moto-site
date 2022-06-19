@@ -37,7 +37,7 @@ const Questions = () => {
         <div className={nasway.Questions}>
 
             <div className={nasway.ImageBlock}>
-                  <Image src={size.width >= 920 ? MotoQuestion.src : MotoQuestion2.src} alt="dsdddd" width={672} height={567}/>
+                  <Image src={size.width >= 920 ? MotoQuestion.src : MotoQuestion2.src} alt="dsdddd" width={size.width >= 920 ? 504 : 346} height={size.width >= 920 ? 491 : 332}/>
             </div>    
 
             <div className={nasway.TxtBlock}>
@@ -47,7 +47,7 @@ const Questions = () => {
                 <div></div>
 
                <div className={nasway.SgeinKotokbas}>
-                  <SubText content="Оставьте заявку на бесплатную консультацию. Мы перезвоним Вам в течение 15 минут!"/>
+                  <SubText black content="Оставьте заявку на бесплатную консультацию. Мы перезвоним Вам в течение 15 минут!"/>
                </div>
 
                <div>

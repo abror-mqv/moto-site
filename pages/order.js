@@ -10,7 +10,10 @@ const order = () => {
             <Header/>
             </div>
             
-            <Order/>
+            
+             <Order/>
+           
+           
         </div>
     );
 };
