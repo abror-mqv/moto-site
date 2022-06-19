@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
 
-.BuStyle{
+.BuStyle {
     width: 284px;
     height: 53px;
     background: linear-gradient(318.07deg, #68B551 10.19%, #3AB177 92.37%);
@@ -12,12 +12,52 @@
     line-height: 22px;
 
     color: #23262B;
+    z-index: 100;
+    transition: 0.1s;
 }
 
-.GreyStyle{
-    width: 353px;
+.BuStyle:hover{
+    transform: scale(102%);
+}
+.BuStyle::before{
+    
+}
+.BuStyle:before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    height: calc(100% + 4px);
+    top: -2px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to bottom right, #ffffff 13%, #68B551 66% );
+    // transform: translate3d(0px, 0px, 0) scale(1.1);
+    transform: scale(102%);
+    filter: blur(0px);
+    opacity: var(1);
+    transition: opacity 0.3s;
+    border-radius: inherit;
+}
+.BuStyle::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: inherit;
+    border-radius: inherit;
+}
+
+
+
+.GreyStyle {
+    width: max-content;
+    padding: 0 45px 0 45px;
     height: 53px;
-    background: rgba(35, 38, 43, 1);
+    background: #23262B;
     border-radius: 12px;
     font-family: 'Roboto';
     font-style: normal;
@@ -25,5 +65,37 @@
     font-size: 19px;
     line-height: 22px;
 
-    color:  rgba(255, 255, 255, 1);
+    color: rgba(255, 255, 255, 1);
+    z-index: 100;
+
+}
+
+.GreyStyle:before {
+    content: "ddf";
+    z-index: -1;
+    position: absolute;
+    height: calc(100% + 4px);
+    top: -2px;
+    right: 1px;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to bottom right, #ffffff 13%, #23262B 66% );
+    
+    // transform: translate3d(0px, 0px, 0) scale(1.1);
+    transform: scale(102%);
+    filter: blur(10px);
+    opacity: var(1);
+    transition: opacity 0.3s;
+    border-radius: inherit;
+}
+.GreyStyle::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: inherit;
+    border-radius: inherit;
 }
