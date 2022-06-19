@@ -49,10 +49,21 @@
                 display: flex;
                 justify-content: center;
                 margin-bottom: 26px;
+                margin-top: 31px;
                 .UndeRug{
-                    min-width: 500px;
+                    min-width: 420px;
                     display: flex;
                     justify-content: space-between;
+                    align-items: center;
+                    transition: 0.1s;
+                    img:active{
+                        -webkit-filter: grayscale(100%);
+                        /* Safari 6.0 - 9.0 */
+                        filter: grayscale(40%);
+                        transform: scale(104%);
+                        
+                        transition: 0.1s; 
+                    }
                 }
             }
             .SwiperSlide {

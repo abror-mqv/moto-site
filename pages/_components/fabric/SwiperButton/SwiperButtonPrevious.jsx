@@ -1,13 +1,11 @@
 import { useSwiper } from "swiper/react";
 import nasway from "./SwiperButton.module.scss"
-import { Button } from "@mui/material";
-import Image from "next/image";
-import Prev from './Prev.svg'
+import Prev from './Prev.png'
 
 
 const SwiperButtonPrevious = ({ children }) => {
   const swiper = useSwiper();
-  return <Button onClick={() => swiper.slidePrev()} className={nasway.ButtonStyle}><Image src={Prev.src} alt="Previous slide" width={7} height={16}/></Button>;
+  return <img src={Prev.src} alt="Next slide" width={36} height={36} onClick={() => swiper.slidePrev()}/>
 };
 
 export default SwiperButtonPrevious 
