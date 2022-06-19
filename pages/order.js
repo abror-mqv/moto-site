@@ -5,7 +5,7 @@ import Header from './_components/components/header/Header';
 
 const order = () => {
     return (
-        <div className={styles.Home}>
+        <div className={styles.Order} >
             <Header/>
             <Order/>
         </div>

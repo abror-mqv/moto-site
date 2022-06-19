@@ -3,3 +3,13 @@
     flex-direction: column;
     align-items: center;
 }
+
+.Order > header{
+    display: none;
+}
+
+@media  screen and (max-width: 920px){
+    .Order > header{
+        display: block;
+    }
+} 
