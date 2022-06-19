@@ -4,12 +4,12 @@
     align-items: center;
 }
 
-.Order > header{
+.headerVisible{
     display: none;
 }
 
 @media  screen and (max-width: 920px){
-    .Order > header{
+    .headerVisible{
         display: block;
     }
 } 
