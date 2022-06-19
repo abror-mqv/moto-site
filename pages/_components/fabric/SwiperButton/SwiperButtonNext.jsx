@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const SwiperButtonNext = ({ children }) => {
   const swiper = useSwiper();
-  return <Button onClick={() => swiper.slideNext()} className={nasway.ButtonStyle}><Image src={Next.src} alt="Next slide" width={7} height={16h}/></Button>;
+  return <Button onClick={() => swiper.slideNext()} className={nasway.ButtonStyle}><Image src={Next.src} alt="Next slide" width={7} height={16}/></Button>;
 };
 
 export default SwiperButtonNext
