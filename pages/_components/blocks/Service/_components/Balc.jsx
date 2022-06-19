@@ -1,17 +1,16 @@
 import React from 'react';
-import Image from 'next/image'
-import Button from '@mui/material'
-import nasway from './Balc.module.scss'
+import { Button } from '@mui/material';
 import Title from '../../../fabric/Title/Title';
-
+import nasway from './Balc.module.scss'
+import SubText from '../../../fabric/SubText/SubText';
 
 const Balc = (props) => {
     return (
-        <Button clvassName={nasway.Balc}>
-            <img src={props.image} alt={props.title}/>
-            <div className={nasway.TextBlock}>
-                <Title content={props.title}/>
-                
+        <Button className={nasway.Balc}>
+            <img src={props.image.src} alt={props.title}/>
+            <div>
+                <Title black content={props.title} />
+                <SubText black content={props.text}/>
             </div>
         </Button>
     );

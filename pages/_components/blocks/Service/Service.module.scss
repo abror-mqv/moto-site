@@ -1,0 +1,12 @@
+.Service{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 116px;
+    div{
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        margin-top: 40px;
+    }
+}
