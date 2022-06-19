@@ -1,0 +1,89 @@
+.Questions{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+
+    background: linear-gradient(318.07deg, #68B551 10.19%, #3AB177 92.37%);
+    border-radius: 20px;
+    max-height: 300px;
+    align-items: center;
+    margin-top: 150px;
+
+    padding: 40px;
+
+    .ImgBlock{
+        position: absolute;     
+    }
+   
+    
+    .TxtBlock{
+        display: flex;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+
+        .SgeinKotokbas{
+            max-width: 400px;
+            margin: 16px 0 40px 0;
+        }
+    }
+}
+
+@media  screen and (max-width: 1300px) {
+
+    .Questions{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    
+        background: linear-gradient(318.07deg, #68B551 10.19%, #3AB177 92.37%);
+        border-radius: 20px;
+        max-height: 300px;
+        align-items: center;
+        margin-top: 150px;
+    
+        padding: 3%;
+    
+        .ImgBlock{
+            position: absolute;
+         
+        }       
+        
+        .TxtBlock{
+            display: flex;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            button{
+                width: 100%;
+                font-size: 15px;
+                margin-top: -30px;
+            }
+
+            .SgeinKotokbas{
+                max-width: 400px;
+                margin: 16px 0 40px 0;
+            }    
+        }
+    }   
+}
+
+
+@media  screen and (max-width: 920px) {
+    .Questions{
+        flex-direction: column;
+        margin-top: 30px;
+        gap: 20px;
+        background: none;
+
+        .TxtBlock{
+            background: linear-gradient(318.07deg, #68B551 10.19%, #3AB177 92.37%);
+            padding: 40px;
+            width: 100vw;
+            button{
+                width: 100%;
+            }
+        }
+    }
+}
+

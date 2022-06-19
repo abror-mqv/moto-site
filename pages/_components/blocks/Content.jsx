@@ -5,6 +5,7 @@ import HomeBlock from './HomeBlock/HomeBlock';
 import Motopark from './Motopark/Motopark';
 import PhotoZone from './PhotoZone/PhotoZone';
 import Documents from './Documents/Documents';
+import Questions from './Questions/Questions';
 
 const Content = () => {
     return (
@@ -14,6 +15,7 @@ const Content = () => {
               {/* Arrmor_Zone */}
               <PhotoZone/>
               <Documents/>
+              <Questions/>
               
 
 
