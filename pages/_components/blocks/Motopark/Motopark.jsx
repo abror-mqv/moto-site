@@ -122,10 +122,10 @@ const Motopark = () => {
         >
           {renderList}
           <div className={nasway.underTag}>
-            <div>
-              <SwiperButtonPrevious>Prev</SwiperButtonPrevious>
+            <div className={nasway.UndeRug}>
+              <SwiperButtonPrevious></SwiperButtonPrevious>
               <Title content={title} />
-              <SwiperButtonNext>Next</SwiperButtonNext>
+              <SwiperButtonNext></SwiperButtonNext>
             </div>
           </div>
         </Swiper>
