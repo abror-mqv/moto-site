@@ -11,6 +11,7 @@ import SubText from "../fabric/SubText/SubText";
 import RegButton from "../fabric/RegularButton/RegButton";
 import Image from "next/image";
 
+
 function useWindowSize() {
   const [windowSize, setWindowSize] = useState({
     width: undefined,
@@ -58,34 +59,32 @@ const Order = () => {
         <div>
           <Formik
             initialValues={{
-              login: "",
               name: "",
-              serName: "",
+              phone: "",
+              timeCall: "",
             }}
             onSubmit={(values) => {
               alert(JSON.stringify(values, null, 2)); // нужен для того чтобы отслеживать что отправилось
-            }}
-          >
+              // Тут могла бы быть ваша реклама!!!
+            }}>
+
             <Form>
-              <div>
-                <label htmlFor="login">Введите логин</label>
-                <Field id="login" name="login" placeholder="Введите логин" />
-                <br />
+              <div className={nasway.BlockInput}>
 
-                <label htmlFor="name">Введите имя</label>
-                <Field id="name" name="name" placeholder="Введите имя" />
+                <Field id="name" name="name" placeholder="Ваше имя" className={nasway.inputValue}/>
                 <br />
-
-                <label htmlFor="serName">Введите фамилию</label>
+                <Field id="phone" name="phone" placeholder="Ваш номер телефона" className={nasway.inputValue} />
+                <br />
                 <Field
-                  id="serName"
-                  name="serName"
-                  placeholder="Введите фамилию"
-                />
+                  id="timeCall"
+                  name="timeCall"
+                  placeholder="Желаемое время звонка"
+                  className={nasway.inputValue}/>
                 <br />
-              </div>
 
-              <Button text="ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ"  />
+              </div>
+              
+              <Button text="ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ"/>
             </Form>
           </Formik>
         </div>
