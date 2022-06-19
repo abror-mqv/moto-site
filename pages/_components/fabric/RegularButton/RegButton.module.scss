@@ -13,9 +13,14 @@
 
     color: #23262B;
     z-index: 100;
+    transition: 0.1s;
 }
+
 .BuStyle:hover{
-    background-color: #23262B;
+    transform: scale(102%);
+}
+.BuStyle::before{
+    
 }
 .BuStyle:before {
     content: "";
@@ -66,7 +71,7 @@
 }
 
 .GreyStyle:before {
-    content: "";
+    content: "ddf";
     z-index: -1;
     position: absolute;
     height: calc(100% + 4px);
@@ -75,9 +80,10 @@
     bottom: 0;
     left: 0;
     background: linear-gradient(to bottom right, #ffffff 13%, #23262B 66% );
+    
     // transform: translate3d(0px, 0px, 0) scale(1.1);
     transform: scale(102%);
-    filter: blur(0px);
+    filter: blur(10px);
     opacity: var(1);
     transition: opacity 0.3s;
     border-radius: inherit;

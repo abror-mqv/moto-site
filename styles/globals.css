@@ -21,3 +21,13 @@ a {
   box-sizing: border-box;
 }
 
+
+.button--hyperion {
+	font-family: input-mono-narrow, monospace;
+	font-weight: 500;
+	padding: 1rem 1.5rem;
+	border: 1px solid #000;
+	overflow: hidden;
+	color: #fff;
+}
+
