@@ -6,11 +6,11 @@ import Error404 from './_components/blocks/ERROR_404/Error404'
 
 export default function Custom404() {
     return (
-
+        <>
      <div className={styles.Home}>
       <Header/>
       <Error404/>
     </div>
-   
+      </>    
         )
 }
