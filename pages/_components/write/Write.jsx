@@ -10,6 +10,10 @@ import SubText from "../fabric/SubText/SubText";
 import RegButton from "../fabric/RegularButton/RegButton";
 import Image from "next/image";
 
+import WhatsApp from "../write/components/icons/WhatsApp.png";
+import vkcom from "../write/components/icons/vkcom.png";
+import Instagram from "../write/components/icons/instagram.png";
+
 function useWindowSize() {
   const [windowSize, setWindowSize] = useState({
     width: undefined,
@@ -62,7 +66,22 @@ const Write = () => {
           <p>344002, г. Ростов-на-Дону, ул. Пойменная 2а, парковка P9</p>
         </div>
         <div className={nasway.SgeinKotokbas}><p></p></div>    
-        <div className={nasway.SgeinKotokbas}><p></p></div>            
+        <div className={nasway.SgeinKotokbas}><p></p></div>    
+
+        <ul className={nasway.Contacts}>
+        <a href="#">
+          <img src={WhatsApp.src} alt="Звонок" />
+        </a>
+        <a href="#">
+          <img src={vkcom.src} alt="Сообщение" />
+        </a>
+        <a href="#">
+          <img src={Instagram.src} alt="Мессенджер" />
+        </a>
+        <a href="#"></a>
+        <a href="#"></a>
+        <a href="#"></a>
+      </ul>        
       </div>
 
       <div className={nasway.TxtBlock}>
