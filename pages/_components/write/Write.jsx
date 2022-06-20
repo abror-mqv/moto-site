@@ -69,7 +69,7 @@ const Write = () => {
         <div className={nasway.SgeinKotokbas}><p></p></div>    
 
         <ul className={nasway.Contacts}>
-        <a href="#">
+        <a href="#" className={nasway.Whats}>
           <img src={WhatsApp.src} alt="Звонок" />
         </a>
         <a href="#">

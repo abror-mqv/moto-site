@@ -5,13 +5,10 @@
   justify-content: center;
   max-width: 969px;
   max-height: 578px;
-  gap: 130px;
-  // background: linear-gradient(318.07deg, #68b551 10.19%, #3ab177 92.37%);
+  gap: 165px;
   border-radius: 20px;
   max-height: 578px;
   align-items: center;
-  // margin-top: 150px;
-  //  margin-left: 20%;//  Удолить параметр он нужет для отцентровке нижу при уменьшенном экране такой же параметр
 
   padding: 40px;
 
@@ -25,7 +22,6 @@
     font-weight: 400;
     font-size: 12px;
     line-height: 139.69%;
-    /* or 17px */
 
     text-align: justify;
 
@@ -49,7 +45,7 @@
 
     line-height: 30px;
     background: none;
-    width: 100%;
+    width: 130%;
 
     outline: none;
     resize: none;
@@ -88,7 +84,6 @@
   }
 
   .ImgBlock {
-    // position: absolute;
   }
 
   .TxtBlock {
@@ -100,9 +95,6 @@
     
   }
   .SgeinKotokbasTitle > p {
-    /* Телефон: */
-
-    // position: absolute;
     width: 88px;
     height: 30px;
 
@@ -118,7 +110,6 @@
   }
 
   .SgeinKotokbas > p{
-    // position: absolute;
     width: 275px;
     height: 35px;
 
@@ -138,25 +129,59 @@
     justify-content: space-between;
     gap: 18px;
     flex-wrap: nowrap;
-}
+  }
+  .Whats{
+    display: block;
+  }
 }
 
 @media screen and (max-width: 920px) {
   .Write {
     flex-direction: column;
     margin-top: 50%;
-    // margin-left: 0;//  Удолить параметр он нужен для обнуление верхнего параметра что бы мобильная версия не есздила
     gap: 20px;
     background: none;
     padding: 0;
 
     .TxtBlock {
-      // background: linear-gradient(318.07deg, #68b551 10.19%, #3ab177 92.37%);
       padding: 40px;
       width: 100vw;
       button {
         width: 100%;
       }
+    }
+    .inputValue {
+      border: 0;
+      border-bottom: 2px solid transparent;
+      border-image: linear-gradient(#68b551, #3ab177);
+      border-image-slice: 1;
+  
+      line-height: 30px;
+      background: none;
+      width: 100%;
+  
+      outline: none;
+      resize: none;
+      resize: vertical;
+      resize: horizontal;
+  
+      outline-offset: 0;
+  
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+  
+      color-scheme: dark;
+  
+      padding-bottom: 10px;
+      padding-top: 30px;
+  
+      opacity: 0.75;
+    }
+    .Whats{
+      display: none;
     }
   }
 }
