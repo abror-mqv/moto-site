@@ -75,12 +75,14 @@ const Write = () => {
         <a href="#">
           <img src={vkcom.src} alt="Сообщение" />
         </a>
+        <span className={nasway.ContactText}>ВКонтакте</span>
         <a href="#">
-          <img src={Instagram.src} alt="Мессенджер" />
+          <img src={Instagram.src} alt="Мессенджер" />          
         </a>
-        <a href="#"></a>
-        <a href="#"></a>
-        <a href="#"></a>
+        <span className={nasway.ContactText}>Instagram</span>
+        <a href="#" className={nasway.Whats}></a>
+        <a href="#" className={nasway.Whats}></a>
+        <a href="#" className={nasway.Whats}></a>
       </ul>        
       </div>
 

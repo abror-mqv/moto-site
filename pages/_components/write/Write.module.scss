@@ -9,129 +9,111 @@
   border-radius: 20px;
   max-height: 578px;
   align-items: center;
-
   padding: 40px;
-
   .TextUnderButton {
     padding-top: 10px;
     width: 353px;
     height: 55px;
-
     font-family: "Roboto";
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
     line-height: 139.69%;
-
     text-align: justify;
-
     color: #ffffff;
-
     opacity: 0.75;
   }
   .TextUnderButton > a {
     text-decoration: underline;
   }
-
   .BlockInput {
     padding-bottom: 40px;
   }
-
   .inputValue {
     border: 0;
     border-bottom: 2px solid transparent;
     border-image: linear-gradient(#68b551, #3ab177);
     border-image-slice: 1;
-
     line-height: 30px;
     background: none;
     width: 130%;
-
     outline: none;
     resize: none;
     resize: vertical;
     resize: horizontal;
-
     outline-offset: 0;
-
     font-family: "Roboto";
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
-
     color-scheme: dark;
-
     padding-bottom: 10px;
     padding-top: 30px;
-
     opacity: 0.75;
   }
-
   .inputValue::placeholder {
     color: #ffffff;
-
     opacity: 0.7;
     position: absolute;
     width: 187px;
     height: 19px;
-
     font-family: "Roboto";
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
   }
-
   .ImgBlock {
   }
-
   .TxtBlock {
     display: flex;
     justify-content: center;
     display: flex;
     flex-direction: column;
-
-    
   }
   .SgeinKotokbasTitle > p {
     width: 88px;
     height: 30px;
-
     font-family: "Roboto";
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
     line-height: 23px;
-
     color: #ffffff;
-
     opacity: 0.7;
   }
-
-  .SgeinKotokbas > p{
+  .SgeinKotokbas > p {
     width: 275px;
     height: 35px;
-
     font-family: "Roboto";
     font-style: normal;
     font-weight: 300;
     font-size: 20px;
     line-height: 23px;
-
     color: #ffffff;
-
     opacity: 0.7;
   }
 
-  .Contacts{
+  .Contacts {
     display: flex;
     justify-content: space-between;
     gap: 18px;
     flex-wrap: nowrap;
   }
-  .Whats{
+  .Whats {
     display: block;
+  }
+  .ContactText {
+    display: none;
+    width: 116px;
+    height: 28px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 23.8213px;
+    line-height: 28px;
+    color: #ffffff;
   }
 }
 
@@ -142,7 +124,6 @@
     gap: 20px;
     background: none;
     padding: 0;
-
     .TxtBlock {
       padding: 40px;
       width: 100vw;
@@ -155,33 +136,38 @@
       border-bottom: 2px solid transparent;
       border-image: linear-gradient(#68b551, #3ab177);
       border-image-slice: 1;
-  
       line-height: 30px;
       background: none;
       width: 100%;
-  
       outline: none;
       resize: none;
       resize: vertical;
       resize: horizontal;
-  
       outline-offset: 0;
-  
       font-family: "Roboto";
       font-style: normal;
       font-weight: 400;
       font-size: 16px;
       line-height: 19px;
-  
       color-scheme: dark;
-  
       padding-bottom: 10px;
       padding-top: 30px;
-  
       opacity: 0.75;
     }
-    .Whats{
+    .Whats {
       display: none;
+    }
+    .ContactText {
+      display: block;
+      width: 116px;
+      height: 28px;
+      padding-top: 15px;
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 300;
+      font-size: 23.8213px;
+      line-height: 28px;
+      color: #ffffff;
     }
   }
 }
