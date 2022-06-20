@@ -1,8 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import nasway from "./Order.module.scss";
+import nasway from "./Write.module.scss";
 import Title from "../fabric/Title/Title";
-import Button from "./components/Button";
 import { Formik, Field, Form } from "formik";
 
 import MotoQuestion from "../blocks/Questions/MotoQuestions.png";
@@ -32,35 +31,57 @@ function useWindowSize() {
   return windowSize;
 }
 
-const Order = () => {
+const Write = () => {
   const size = useWindowSize();
   return (
-    <div className={nasway.Order}>
+    <div className={nasway.Write}>
       <div className={nasway.ImageBlock}>
-        <Image
-          src={size.width >= 920 ? MotoQuestion.src : MotoQuestion2.src}
-          alt="dsdddd"
-          width={size.width >= 920 ? 504 : 346}
-          height={size.width >= 920 ? 491 : 332}
-        />
+        <Title content="НАПИШИТЕ НАМ" />
+
+       
+        <div className={nasway.SgeinKotokbas}><p></p> </div>
+
+        <div className={nasway.SgeinKotokbasTitle}>
+          <p> Телефон:</p>
+        </div>
+        <div className={nasway.SgeinKotokbas}>
+          <p> 8 (918) 545-59-93</p>
+        </div>
+
+        <div className={nasway.SgeinKotokbasTitle}>
+          <p> E-mail:</p>
+        </div>
+        <div className={nasway.SgeinKotokbas}>
+          <p> vvvasilevsa@gmail.com</p>
+        </div>
+
+        <div className={nasway.SgeinKotokbasTitle}>
+          <p> Адрес:</p>
+        </div>
+        <div className={nasway.SgeinKotokbas}>
+          <p>344002, г. Ростов-на-Дону, ул. Пойменная 2а, парковка P9</p>
+        </div>
+        <div className={nasway.SgeinKotokbas}><p></p></div>    
+        <div className={nasway.SgeinKotokbas}><p></p></div>            
       </div>
 
       <div className={nasway.TxtBlock}>
-        <Title black content="ОСТАВЬТЕ ЗАЯВКУ" />
+        <Title green content="НАПИШИТЕ НАМ" />
 
-        <div className={nasway.SgeinKotokbas}>
+        {/* <div className={nasway.SgeinKotokbas}>
           <SubText
             modalka
             content="Если вам нужна помощь и персональная консультация, просто оставьте заявку и мы перезвоним вам в течение 15 минут! "
           />
-        </div>
+        </div> */}
 
         <div>
           <Formik
             initialValues={{
               name: "",
+              email: "",
               phone: "",
-              timeCall: "",
+              text: "",
             }}
             onSubmit={(values) => {
               alert(JSON.stringify(values, null, 2)); // нужен для того чтобы отслеживать что отправилось
@@ -72,7 +93,14 @@ const Order = () => {
                 <Field
                   id="name"
                   name="name"
-                  placeholder="Ваше имя"
+                  placeholder="Ваше имя*"
+                  className={nasway.inputValue}
+                />
+                <br />
+                <Field
+                  id="email"
+                  name="email"
+                  placeholder="Ваша почта email*"
                   className={nasway.inputValue}
                 />
                 <br />
@@ -84,22 +112,19 @@ const Order = () => {
                 />
                 <br />
                 <Field
-                  id="timeCall"
-                  name="timeCall"
-                  placeholder="Желаемое время звонка"
+                  id="text"
+                  name="text"
+                  placeholder="Ваше сообщение*"
                   className={nasway.inputValue}
                 />
                 <br />
+                <label className={nasway.TextUnderButton}>
+                  * - пункты, обязательные для заполнения
+                </label>
               </div>
 
-              <Button text="ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ" />
+              <RegButton text="НАПИСАТЬ" />
               <br />
-              <label className={nasway.TextUnderButton}>
-                Нажимая кнопку «Получить консультацию»», Вы даете
-                <br /> согласие на <a href="#"> обработку персональных данных</a> и принимаете
-                <br />
-               <a href="#"> политику конфиденциальности.</a>
-              </label>
             </Form>
           </Formik>
         </div>
@@ -108,4 +133,4 @@ const Order = () => {
   );
 };
 
-export default Order;
+export default Write;

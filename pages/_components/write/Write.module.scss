@@ -1,17 +1,17 @@
-.Order {
+.Write {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
   justify-content: center;
   max-width: 969px;
   max-height: 578px;
-
-  background: linear-gradient(318.07deg, #68b551 10.19%, #3ab177 92.37%);
+  gap: 130px;
+  // background: linear-gradient(318.07deg, #68b551 10.19%, #3ab177 92.37%);
   border-radius: 20px;
   max-height: 578px;
   align-items: center;
-  margin-top: 150px;
-   margin-left: 20%;//  Удолить параметр он нужет для отцентровке нижу при уменьшенном экране такой же параметр
+  // margin-top: 150px;
+  //  margin-left: 20%;//  Удолить параметр он нужет для отцентровке нижу при уменьшенном экране такой же параметр
 
   padding: 40px;
 
@@ -29,14 +29,12 @@
 
     text-align: justify;
 
-    color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
 
     opacity: 0.75;
-
-    
   }
-  .TextUnderButton > a{
-    text-decoration:underline;
+  .TextUnderButton > a {
+    text-decoration: underline;
   }
 
   .BlockInput {
@@ -45,7 +43,10 @@
 
   .inputValue {
     border: 0;
-    border-bottom: 2px solid #23262b;
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient(#68b551, #3ab177);
+    border-image-slice: 1;
+
     line-height: 30px;
     background: none;
     width: 100%;
@@ -72,7 +73,7 @@
   }
 
   .inputValue::placeholder {
-    color: #23262b;
+    color: #ffffff;
 
     opacity: 0.7;
     position: absolute;
@@ -87,7 +88,7 @@
   }
 
   .ImgBlock {
-    position: absolute;
+    // position: absolute;
   }
 
   .TxtBlock {
@@ -96,19 +97,48 @@
     display: flex;
     flex-direction: column;
 
-    .SgeinKotokbas {
-      max-width: 400px;
-      margin: 16px 0 40px 0;
-      font-size: 16px;
-    }
+    
+  }
+  .SgeinKotokbasTitle > p {
+    /* Телефон: */
+
+    // position: absolute;
+    width: 88px;
+    height: 30px;
+
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+
+    color: #ffffff;
+
+    opacity: 0.7;
+  }
+
+  .SgeinKotokbas > p{
+    // position: absolute;
+    width: 275px;
+    height: 35px;
+
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 23px;
+
+    color: #ffffff;
+
+    opacity: 0.7;
   }
 }
 
 @media screen and (max-width: 920px) {
-  .Order {
+  .Write {
     flex-direction: column;
     margin-top: 50%;
-    margin-left: 0;//  Удолить параметр он нужен для обнуление верхнего параметра что бы мобильная версия не есздила
+    // margin-left: 0;//  Удолить параметр он нужен для обнуление верхнего параметра что бы мобильная версия не есздила
     gap: 20px;
     background: none;
     padding: 0;
