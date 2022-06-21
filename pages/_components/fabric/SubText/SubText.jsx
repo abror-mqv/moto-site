@@ -3,9 +3,7 @@ import nasway from './SubText.module.scss'
 
 const styleProps = (props) => {
   if(props.black) return(nasway.SubTextBlack);
-  // else if(props.biggreen) return(nasway.biggreen)
-  // else if(props.errorwhite) return(nasway.errorwhite)
-  // else if(trueFalse) return(nasway.black)
+  if(props.modalka) return(nasway.GreenModalka);
   else return(nasway.SubText); 
 }
 

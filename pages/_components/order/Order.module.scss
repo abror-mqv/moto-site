@@ -1,50 +1,125 @@
-.Order{
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
+.Order {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  justify-content: center;
+  max-width: 969px;
+  max-height: 578px;
 
-    background: linear-gradient(318.07deg, #68B551 10.19%, #3AB177 92.37%);
-    border-radius: 20px;
-    max-height: 578px;
-    align-items: center;
-    margin-top: 150px;
+  background: linear-gradient(318.07deg, #68b551 10.19%, #3ab177 92.37%);
+  border-radius: 20px;
+  max-height: 578px;
+  align-items: center;
+  margin-top: 150px;
+   margin-left: 20%;//  Удолить параметр он нужет для отцентровке нижу при уменьшенном экране такой же параметр
 
-    padding: 40px;
+  padding: 40px;
 
-    .ImgBlock{
-        position: absolute;     
-    }
-   
+  .TextUnderButton {
+    padding-top: 10px;
+    width: 353px;
+    height: 55px;
+
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 139.69%;
+    /* or 17px */
+
+    text-align: justify;
+
+    color: rgba(0, 0, 0, 0.5);
+
+    opacity: 0.75;
+
     
-    .TxtBlock{
-        display: flex;
-        justify-content: center;
-        display: flex;
-        flex-direction: column;
+  }
+  .TextUnderButton > a{
+    text-decoration:underline;
+  }
 
-        .SgeinKotokbas{
-            max-width: 400px;
-            margin: 16px 0 40px 0;
-        }
+  .BlockInput {
+    padding-bottom: 40px;
+  }
+
+  .inputValue {
+    border: 0;
+    border-bottom: 2px solid #23262b;
+    line-height: 30px;
+    background: none;
+    width: 100%;
+
+    outline: none;
+    resize: none;
+    resize: vertical;
+    resize: horizontal;
+
+    outline-offset: 0;
+
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+
+    color-scheme: dark;
+
+    padding-bottom: 10px;
+    padding-top: 15px;
+
+    opacity: 0.75;
+  }
+
+  .inputValue::placeholder {
+    color: #23262b;
+
+    opacity: 0.7;
+    position: absolute;
+    width: 187px;
+    height: 19px;
+
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .ImgBlock {
+    position: absolute;
+  }
+
+  .TxtBlock {
+    display: flex;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+
+    .SgeinKotokbas {
+      max-width: 400px;
+      margin: 16px 0 40px 0;
+      font-size: 16px;
     }
+  }
 }
 
+@media screen and (max-width: 920px) {
+  .Order {
+    flex-direction: column;
+    margin-top: 50%;
+    margin-left: 0;//  Удолить параметр он нужен для обнуление верхнего параметра что бы мобильная версия не есздила
+    gap: 20px;
+    background: none;
+    padding: 0;
 
-@media  screen and (max-width: 920px) {
-    .Order{
-        flex-direction: column;
-        margin-top: 30px;
-        gap: 20px;
-        background: none;
-
-        .TxtBlock{
-            background: linear-gradient(318.07deg, #68B551 10.19%, #3AB177 92.37%);
-            padding: 40px;
-            width: 100vw;
-            button{
-                width: 100%;
-            }
-        }
+    .TxtBlock {
+      background: linear-gradient(318.07deg, #68b551 10.19%, #3ab177 92.37%);
+      padding: 40px;
+      width: 100vw;
+      button {
+        width: 100%;
+      }
     }
+  }
 }
-

@@ -50,7 +50,7 @@ const Order = () => {
 
         <div className={nasway.SgeinKotokbas}>
           <SubText
-            black
+            modalka
             content="Если вам нужна помощь и персональная консультация, просто оставьте заявку и мы перезвоним вам в течение 15 минут! "
           />
         </div>
@@ -58,34 +58,48 @@ const Order = () => {
         <div>
           <Formik
             initialValues={{
-              login: "",
               name: "",
-              serName: "",
+              phone: "",
+              timeCall: "",
             }}
             onSubmit={(values) => {
               alert(JSON.stringify(values, null, 2)); // нужен для того чтобы отслеживать что отправилось
+              // Тут могла бы быть ваша реклама!!!
             }}
           >
             <Form>
-              <div>
-                <label htmlFor="login">Введите логин</label>
-                <Field id="login" name="login" placeholder="Введите логин" />
-                <br />
-
-                <label htmlFor="name">Введите имя</label>
-                <Field id="name" name="name" placeholder="Введите имя" />
-                <br />
-
-                <label htmlFor="serName">Введите фамилию</label>
+              <div className={nasway.BlockInput}>
                 <Field
-                  id="serName"
-                  name="serName"
-                  placeholder="Введите фамилию"
+                  id="name"
+                  name="name"
+                  placeholder="Ваше имя"
+                  className={nasway.inputValue}
+                />
+                <br />
+                <Field
+                  id="phone"
+                  name="phone"
+                  placeholder="Ваш номер телефона"
+                  className={nasway.inputValue}
+                />
+                <br />
+                <Field
+                  id="timeCall"
+                  name="timeCall"
+                  placeholder="Желаемое время звонка"
+                  className={nasway.inputValue}
                 />
                 <br />
               </div>
 
-              <Button text="ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ"  />
+              <Button text="ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ" />
+              <br />
+              <label className={nasway.TextUnderButton}>
+                Нажимая кнопку «Получить консультацию»», Вы даете
+                <br /> согласие на <a href="#"> обработку персональных данных</a> и принимаете
+                <br />
+               <a href="#"> политику конфиденциальности.</a>
+              </label>
             </Form>
           </Formik>
         </div>
