@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@font-face {
+    font-family: "Bebas Neue";
+    src: local("Bebas Neue"),
+        url("../../font/bebasneue/BebasNeueBold.ttf") format("truetype");
+    font-weight: bold;
+}
 
 .Service {
     display: flex;
@@ -13,47 +19,56 @@
         gap: 25px;
         margin-top: 40px;
 
-        .Balc {
-            background: linear-gradient(343deg, #68B551 10.19%, #3AB177 92.37%);
-            color: #23262B;
+        .BGRAD {
+            padding: 1.5px;
+            background: linear-gradient(to bottom right, #ffffff 13%, #68B551 66%);
             border-radius: 20px;
-            max-height: 200px;
-            padding: 9px 37px 9px 37px;
-            display: flex;
-            gap: 75px;
-
-            .TextBlock {
+            .Balc {
+                background: linear-gradient(343deg, #68B551 10.19%, #3AB177 92.37%);
+                color: #23262B;
+                border-radius: 20px;
+                max-height: 200px;
+                padding: 9px 37px 9px 37px;
                 display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 10px;
+                gap: 75px;
 
-                h3 {
-                    font-size: 40px;
-                    font-weight: 800;
+                z-index: 100;
+                transition: 0.1s;
+
+                .TextBlock {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 10px;
+
+                    h3 {
+                        font-size: 40px;
+                        font-weight: 800;
+                    }
+
+                    p {
+                        font-size: 25px;
+                        line-height: 29px;
+                        font-weight: 400;
+                        text-align: start;
+                        text-transform: none;
+                    }
+
+                    span {
+                        font-family: 'Bebas Neue', cursive;
+                        color: #ffffff;
+                        font-size: 64px;
+                        display: none;
+                    }
                 }
 
-                p {
-                    font-size: 25px;
-                    line-height: 29px;
-                    font-weight: 400;
-                    text-align: start;
-                    text-transform: none;
-                }
 
-                span {
-                    font-family: 'Rajdhani', sans-serif;
-                    color: #ffffff;
-                    font-size: 44px;
-                    display: none;
-                }
             }
-
-
         }
+
+
     }
 }
-
 
 @media screen and (max-width: 1180px) {
     .Courses {
@@ -71,28 +86,78 @@
     }
 }
 
+
+
+
+
+
+
+
 @media screen and (max-width: 920px) {
     .Courses {
-        .Balc {
-            height: 164px;
+        width: 100%;
 
-            .TextBlock {
-                h3 {
-                    font-family: 'Bebas Neue';
-                    font-style: normal;
-                    font-weight: 700;
-                    font-size: 23.8026px;
-                    line-height: 24px;
-                    display: flex;
-                    align-items: center;
-                    text-align: right;
-                    color: #FFFFFF;
+        .BGRAD {
+            border-radius: 17px !important;
+            .Balc {
+                height: 164px;
+                width: 100%;
+                overflow: hidden;
+                padding: 0 !important;
+                border-radius: 17px !important;
+
+                img {
+                    // height: 140px;
+                    height: 95%;
+                    position: absolute;
+                    margin-right: 72%;
+                    z-index: 999;
                 }
 
-                p {
-                    display: none;
+                .TextBlock {
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    align-items: flex-end !important;
+                    position: absolute;
+                    width: 100%;
+
+                    div {
+                        width: 70%;
+                        display: flex;
+                        justify-content: center;
+
+                        h3 {
+                            display: flex;
+                            justify-content: center;
+                            font-family: 'Bebas Neue';
+                            font-weight: 700;
+                            font-size: 23px !important;
+                            line-height: 1px;
+                            padding: 22px 0px 15px 10%;
+                            color: #FFFFFF;
+                            background-color: #23262B;
+                            text-align: center;
+                            width: 100%;
+                            margin-top: 37px;
+
+                        }
+                    }
+
+                    span {
+                        display: block !important;
+                        margin-top: 3px;
+                        margin-right: 24px;
+                    }
+
+
+
+                    p {
+                        display: none;
+                    }
                 }
             }
         }
+
     }
 }

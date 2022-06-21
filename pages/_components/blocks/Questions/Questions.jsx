@@ -34,7 +34,7 @@ const Questions = () => {
     
     const size = useWindowSize();
     return (
-        <div className={nasway.Questions}>
+        <div className={nasway.Questions} id="questions">
 
             <div className={nasway.ImageBlock}>
                   <Image src={size.width >= 920 ? MotoQuestion.src : MotoQuestion2.src} alt="dsdddd" width={size.width >= 920 ? 504 : 346} height={size.width >= 920 ? 491 : 332}/>
