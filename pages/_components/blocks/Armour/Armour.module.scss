@@ -1,15 +1,39 @@
 .MainArmourSection {
-    h3{
+    h3 {
         text-align: center;
         margin-top: 100px;
     }
+
     .Armour {
         display: flex;
         flex-direction: row-reverse;
         justify-content: space-between;
 
         .ImageBlock {
-            max-width: 500px;
+            :global(.swiper-wrapper){
+                height: 120%;
+            }
+            :global(.swiper-pagination) {
+                margin: 0 0 -12px 0  !important;  
+          
+            }
+    
+            :global(.swiper-pagination-bullet) {
+                background: #82889A;
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                opacity: 1;
+            }
+    
+            :global(.swiper-pagination-bullet-active) {
+                background: linear-gradient(138deg, #68B551 10.19%, #3AB177 92.37%);
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                transition: 1s;
+            }
+            max-width: 450px;
         }
 
         .TxtBlock {
@@ -54,3 +78,33 @@
     }
 }
 
+@media screen and (max-width: 920px) {
+    .MainArmourSection {
+
+        .Armour {
+            display: flex;
+            flex-direction: column;
+            .ImageBlock {
+                max-width: 312px;
+                margin-top: 30px;
+            }
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .GreenCircle {
+                width: 251px;
+                height: 251px;
+                margin-top: -405px;
+                position: absolute !important;
+            }
+
+            .TxtBlock {
+                margin-top: 40px !important;
+                div {
+                    display: block;
+                }
+            }
+        }
+    }
+}

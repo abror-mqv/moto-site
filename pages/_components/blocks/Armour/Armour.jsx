@@ -9,11 +9,10 @@ import nasway from "./Armour.module.scss";
 import Cunt from "../../fabric/Cunt/Cunt";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectFade, Autoplay } from "swiper";
+import { EffectFade, Autoplay, Pagination } from "swiper";
 
 import "swiper/css";
 import "swiper/css/effect-fade";
-import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 import Photo_1 from "./assets/Перчатки.png";
@@ -59,7 +58,7 @@ const Armour = () => {
          <div className={nasway.ImageBlock}>
         <Swiper
           effect={"fade"}
-          modules={[EffectFade, Autoplay]}
+          modules={[EffectFade, Autoplay, Pagination]}
           className={nasway.MySwiper}
           loop="true"
           autoplay={{
@@ -67,6 +66,7 @@ const Armour = () => {
             disableOnInteraction: false,
           }}
           centeredSlides={true}
+          pagination={size.width >= 920 ? false : true}
         >
           <SwiperSlide className={nasway.SwiperSlide}>
             {({ isActive }) => (
