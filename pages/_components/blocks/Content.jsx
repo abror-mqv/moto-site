@@ -7,6 +7,8 @@ import PhotoZone from "./PhotoZone/PhotoZone";
 import Documents from "./Documents/Documents";
 import Questions from "./Questions/Questions";
 import Service from "./Service/Service";
+import Armour from "./Armour/Armour";
+
 
 const Content = () => {
   return (
@@ -14,7 +16,7 @@ const Content = () => {
       <HomeBlock />
       <Motopark />
       <Service/>
-      {/* Arrmor_Zone */}
+      <Armour/>
       <PhotoZone />
       <Documents />
       <Questions />

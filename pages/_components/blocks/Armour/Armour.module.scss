@@ -1,0 +1,56 @@
+.MainArmourSection {
+    h3{
+        text-align: center;
+        margin-top: 100px;
+    }
+    .Armour {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+
+        .ImageBlock {
+            max-width: 500px;
+        }
+
+        .TxtBlock {
+            margin-top: 80px;
+
+            div {
+                display: inline;
+
+                h3 {
+                    margin-right: 10px;
+                    display: inline;
+                }
+
+                p {
+                    margin-top: 16px;
+                    max-width: 515px;
+                    font-size: 25px;
+                    line-height: 29px;
+                    margin-bottom: 40px;
+                }
+            }
+        }
+
+        .GreenCircle {
+            background: linear-gradient(318.07deg, #68B551 10.19%, #3AB177 92.37%);
+            width: 484px;
+            height: 484px;
+            border-radius: 50%;
+            position: absolute;
+        }
+    }
+}
+
+
+.SwiperSlide {
+    .StockImage {
+        display: block !important;
+    }
+
+    .NoneImage {
+        display: none !important;
+    }
+}
+

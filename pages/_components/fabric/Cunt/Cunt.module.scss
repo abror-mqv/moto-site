@@ -4,9 +4,14 @@
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 800;
-    font-size: 42.8909px;
+    font-size: 75px;
     line-height: 52px;
     color: #FFFFFF;
-    opacity: 0.3;
-    
+    opacity: 0.3;    
+}
+
+@media  screen and (max-width: 920px) {
+    .Cunt{
+        font-size: 42px;
+    }
 }
