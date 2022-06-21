@@ -10,7 +10,7 @@ import SubText from "../fabric/SubText/SubText";
 import RegButton from "../fabric/RegularButton/RegButton";
 import Image from "next/image";
 
-import WhatsApp from "../write/components/icons/WhatsApp.png";
+import WhatsApp from "./components/icons/Whatsapp.png";
 import vkcom from "../write/components/icons/vkcom.png";
 import Instagram from "../write/components/icons/instagram.png";
 

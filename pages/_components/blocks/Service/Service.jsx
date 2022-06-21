@@ -2,7 +2,14 @@
 import React from 'react';
 import Cunt from '../../fabric/Cunt/Cunt';
 import nasway from './Service.module.scss'
-import Balc from './_components/Balc';
+import SubText from '../../fabric/SubText/SubText';
+import { Button } from '@mui/material';
+import Title from '../../fabric/Title/Title';
+
+
+
+
+// Imitating Data (!)
 
 import Bike1 from './_components/Bike1.png'
 import Bike2 from './_components/Bike2.png'
@@ -12,24 +19,46 @@ const data = [
     {
         image: Bike1,
         title: "МОТОКУРС “БАЗОВЫЙ”",
-        text: "Короткое описание курса. Для кого, зачем, какие преимущества и результаты получит обучающийся."
+        text: "Короткое описание курса. Для кого, зачем, какие преимущества и результаты получит обучающийся.",
+        index: "01"
     },
     {
         image: Bike2,
         title: "МОТОКУРС “ПРОФИ”",
-        text: "Короткое описание курса. Для кого, зачем, какие преимущества и результаты получит обучающийся."
+        text: "Короткое описание курса. Для кого, зачем, какие преимущества и результаты получит обучающийся.",
+        index: "02"
     },
     {
         image: Bike3,
         title: "“МОТОДЖИМХАНА”",
-        text: "Короткое описание курса. Для кого, зачем, какие преимущества и результаты получит обучающийся."
+        text: "Короткое описание курса. Для кого, зачем, какие преимущества и результаты получит обучающийся.",
+        index: "03"
     },
     
 ]
 
-const renderList = data.map(course => {
+// Sorting array by Index field
+
+let newArr = data.sort(function(a, b) {
+    var keyA = a.index, keyB = b.index;
+    if (keyA < keyB) return -1;
+    if (keyA > keyB) return 1;
+    return 0;
+  });
+
+
+// Preparing data to render 
+
+const renderList = newArr.map(course => {
     return(
-        <Balc title={course.title} image={course.image} text={course.text}/> 
+        <Button className={nasway.Balc}>
+            <img src={course.image.src} alt={course.title}/>
+            <div className={nasway.TextBlock}>
+                <Title black content={course.title} />
+                <SubText black content={course.text}/>
+                <span>{course.index}</span>
+            </div>
+        </Button>
     )
 })
 
@@ -38,7 +67,7 @@ const Service = () => {
     return (
         <section className={nasway.Service}>
             <Cunt content="Услуги" />
-            <div>
+            <div className={nasway.Courses}>
                 {renderList}
             </div>          
         </section>

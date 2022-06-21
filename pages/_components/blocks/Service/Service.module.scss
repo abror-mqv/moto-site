@@ -1,12 +1,98 @@
-.Service{
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.Service {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 116px;
-    div{
+
+    .Courses {
         display: flex;
         flex-direction: column;
         gap: 25px;
         margin-top: 40px;
+
+        .Balc {
+            background: linear-gradient(343deg, #68B551 10.19%, #3AB177 92.37%);
+            color: #23262B;
+            border-radius: 20px;
+            max-height: 200px;
+            padding: 9px 37px 9px 37px;
+            display: flex;
+            gap: 75px;
+
+            .TextBlock {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+
+                h3 {
+                    font-size: 40px;
+                    font-weight: 800;
+                }
+
+                p {
+                    font-size: 25px;
+                    line-height: 29px;
+                    font-weight: 400;
+                    text-align: start;
+                    text-transform: none;
+                }
+
+                span {
+                    font-family: 'Rajdhani', sans-serif;
+                    color: #ffffff;
+                    font-size: 44px;
+                    display: none;
+                }
+            }
+
+
+        }
+    }
+}
+
+
+@media screen and (max-width: 1180px) {
+    .Courses {
+        .Balc {
+            .TextBlock {
+                h3 {
+                    font-size: 3vw !important;
+                }
+
+                p {
+                    font-size: 1.6vw !important;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .Courses {
+        .Balc {
+            height: 164px;
+
+            .TextBlock {
+                h3 {
+                    font-family: 'Bebas Neue';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 23.8026px;
+                    line-height: 24px;
+                    display: flex;
+                    align-items: center;
+                    text-align: right;
+                    color: #FFFFFF;
+                }
+
+                p {
+                    display: none;
+                }
+            }
+        }
     }
 }
