@@ -13,14 +13,14 @@
     "@emotion/styled": "^11.9.3",
     "@mdx-js/react": "^2.1.1",
     "@mui/material": "^5.8.3",
+    "axios": "^0.27.2",
     "formik": "^2.2.9",
     "next": "12.1.6",
     "react": "18.1.0",
     "react-dom": "18.1.0",
     "sass": "^1.52.3",
     "scss": "^0.2.4",
-    "swiper": "^8.2.4",
-    "theme-ui": "^0.14.5"
+    "swiper": "^8.2.4"
   },
   "devDependencies": {
     "eslint": "8.17.0",

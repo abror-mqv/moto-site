@@ -2,6 +2,7 @@
     h3 {
         text-align: center;
         margin-top: 100px;
+        margin-bottom: 20px;
     }
 
     .Armour {
@@ -63,6 +64,7 @@
             height: 484px;
             border-radius: 50%;
             position: absolute;
+            margin: -8px -16px 0px 0px;
         }
     }
 }
@@ -97,6 +99,7 @@
                 height: 251px;
                 margin-top: -405px;
                 position: absolute !important;
+                margin-right: 0 !important;
             }
 
             .TxtBlock {

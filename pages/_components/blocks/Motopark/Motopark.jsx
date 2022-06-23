@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-key */
 import React from "react";
 import { useState, useEffect } from "react";
+import axios from "axios";
 
 import Image from "next/image";
 import nasway from "./Motopark.module.scss";
@@ -54,7 +55,7 @@ const motosList = [
     media: moto1,
   },
   {
-    title: "НАСВАЙ",
+    title: "НАСВАЙww",
     // title: "BSE 190",
     description:
       "Здесь должен быть какой то целевой текст который описывает класс техники и рассказывает кому и зачем подойдёт именно этот мотоцикл, коротко, ясно, простым языком, чтобы клиент понимал зачем.",
@@ -73,7 +74,7 @@ const motosList = [
     media: moto4,
   },
 ];
-const Motopark = () => {
+const Motopark = ({posts}) => {
   const swiper = useSwiper();
   useEffect(() => {
     window.addEventListener("resize", () => {
@@ -107,7 +108,7 @@ const Motopark = () => {
 
   return (
     <section className={nasway.Motopark}>
-      <Cunt content="Мотопарк" />
+      <Cunt content="" />
       <div className={nasway.NasWayCircle}></div>
       <div className={nasway.Content}>
         <Swiper
@@ -137,3 +138,8 @@ const Motopark = () => {
 };
 
 export default Motopark;
+
+
+
+
+

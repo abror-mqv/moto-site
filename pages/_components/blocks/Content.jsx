@@ -11,10 +11,11 @@ import Armour from "./Armour/Armour";
 
 
 const Content = () => {
+
   return (
     <div className={nasway.Content}>
       <HomeBlock />
-      <Motopark />
+      <Motopark/>
       <Service/>
       <Armour/>
       <PhotoZone />
