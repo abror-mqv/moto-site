@@ -6,8 +6,10 @@ import Header from './_components/components/header/Header'
 import Footer from './_components/components/footer/Footer'
 import Content from './_components/blocks/Content.jsx'
 
-export default function Home({motopark}) {
-  // console.log(motopark)
+export default function Home({motopark, service}) {
+  // console.log("Motopark: ",motopark)
+  // console.log("Service: : ",service)
+
   return (
     <main className={styles.Home}>
       <Header/>
@@ -19,13 +21,16 @@ export default function Home({motopark}) {
 
 
 // export async function getServerSideProps(){
-//   const motopark = await axios.get("http://127.0.0.1:1337/api/motopark/1");
+//   const url = "http://127.0.0.1:1337"
+//   const motopark = await axios.get(`${url}/api/motopark`);
+//   const service = await axios.get(`${url}/api/service-at-the-home-pages`)
 
 
 
 //   return{
 //     props: {
-//       motopark: motopark.data
+//       motopark: motopark.data,
+//       service: service.data
 //     }
 //   }
 // }

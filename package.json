@@ -1,12 +1,13 @@
 {
   "name": "moto-site",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prod": "next export"
   },
   "dependencies": {
     "@emotion/react": "^11.9.3",
@@ -15,7 +16,7 @@
     "@mui/material": "^5.8.3",
     "axios": "^0.27.2",
     "formik": "^2.2.9",
-    "next": "12.1.6",
+    "next": "^12.1.7-canary.46",
     "react": "18.1.0",
     "react-dom": "18.1.0",
     "sass": "^1.52.3",

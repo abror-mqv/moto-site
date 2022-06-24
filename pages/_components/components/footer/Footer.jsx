@@ -1,5 +1,6 @@
 import React from 'react';
 import nasway from './Footer.module.css'
+import RegButton from '../../fabric/RegularButton/RegButton';
 import Logo from './assets/logo.png'
 import Vector from './assets/Vector.png'
 import Mail from './assets/Mail.svg'
@@ -14,17 +15,16 @@ const Footer = () => {
           <div className={nasway.row}>
             <div className={nasway.footer__col}>
               <h1>
-                <a href=""><img src={Logo.src} alt="" /></a>
+                <a href="" ><img src={Logo.src} alt="" /></a>
               </h1>
               <ul>
                 <li>
                   <span className={nasway.number}
                     ><img src={Vector.src} alt="" />
-                    <a href=""> 8 (800) 200-06-00</a></span
-                  >
+                    <a href="tel:+8 (800) 200-06-00"> 8 (800) 200-06-00</a></span>
                   <span className={nasway.mail}
                     ><img src={Mail.src} alt="" />
-                    <a href=""> inbox@streetbike.ru</a>
+                    <a href="mailto:inbox@streetbike.ru"> inbox@streetbike.ru</a>
                   </span>
                 </li>
               </ul>
@@ -75,7 +75,7 @@ const Footer = () => {
             <div className={nasway.footer__col_button}>
               <span>Есть вопросы или предложения? <br/>
                   Пожалуйста напишите нам!</span>
-                  <button className={nasway.footer__btn}>НАПИСАТЬ НАМ</button>
+                  <RegButton text="НАПИСАТЬ НАМ"/>
             </div>
             
             </div>

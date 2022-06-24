@@ -17,11 +17,14 @@
   margin: 0 auto;
   padding-top: 20px;
   padding-bottom: 40px;
+  display: flex;
+  justify-content: center;
 }
 .row {
   display: flex;
   flex-wrap: wrap;
-  gap: 100px;
+  gap: 80px;
+  width: 80%;
 }
 .footer__col {
   display: flex;
@@ -239,9 +242,16 @@
   }
 }
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 920px) {
+  .row{
+    gap: 30px;
+  }
+  .footer__col_nav > ul{
+    gap: 10px !important;
+  }
   .footer {
     max-width: 100%;
+    margin-top: 77%;
   }
   .first__container {
     padding-left: 40px;
