@@ -11,7 +11,7 @@ import Cunt from "../../fabric/Cunt/Cunt";
 
 const PhotoZone = () => {
   return (
-    <div className={nasway.PhotoZoneMain}>
+    <div className={nasway.PhotoZoneMain} id="photozone">
       <center>
         {/* выбрал тэг для выравнивания по центру так как стили не подрубаются */}
         <div className={nasway.center}>

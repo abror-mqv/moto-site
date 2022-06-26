@@ -10,7 +10,7 @@ import IG from './assets/instagram.png'
 
 const Footer = () => {
     return (
-        <footer className={nasway.footer}>
+        <footer className={nasway.footer} id="contacts">
         <div className={nasway.first__container}>
           <div className={nasway.row}>
             <div className={nasway.footer__col}>

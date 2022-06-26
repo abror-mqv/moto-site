@@ -11,7 +11,7 @@ import Cunt from "../../fabric/Cunt/Cunt";
 
 const Documents = () => {
   return (
-    <div className={nasway.DocumentsMain}>
+    <div className={nasway.DocumentsMain} id="documents">
       <center>
         {/* выбрал тэг для выравнивания по центру так как стили не подрубаются */}
         <div className={nasway.center}>

@@ -107,8 +107,8 @@ const Motopark = ({posts}) => {
   });
 
   return (
-    <section className={nasway.Motopark}>
-      <Cunt content="" />
+    <section className={nasway.Motopark} id="motopark">
+      <Cunt content="Мотопарк" />
       <div className={nasway.NasWayCircle}></div>
       <div className={nasway.Content}>
         <Swiper

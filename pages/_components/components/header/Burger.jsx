@@ -32,7 +32,7 @@ const Burger = () => {
                 <Image src={BookOpen.src} alt="Услуги" width={30} height={30} />
                 <li>Услуги</li>
               </a>
-              <a href="#" rel="noreferrer">
+              <a href="#motopark" rel="noreferrer">
                 <Image
                   src={Building.src}
                   alt="Наш мотопарк"
@@ -41,7 +41,7 @@ const Burger = () => {
                 />
                 <li>Наш мотопарк</li>
               </a>
-              <a href="#" rel="noreferrer">
+              <a href="/articles" rel="noreferrer">
                 <Image
                   src={PlayCircle.src}
                   alt="Блог и статьи"
@@ -50,7 +50,7 @@ const Burger = () => {
                 />
                 <li>Блог и статьи</li>
               </a>
-              <a href="#" rel="noreferrer">
+              <a href="/gallery" rel="noreferrer">
                 <Image
                   src={ImageIcon.src}
                   alt="Галерея"
@@ -59,7 +59,7 @@ const Burger = () => {
                 />
                 <li>Галерея</li>
               </a>
-              <a href="#" rel="noreferrer">
+              <a href="#contacts" rel="noreferrer">
                 <Image
                   src={UserSquare.src}
                   alt="Контакты"

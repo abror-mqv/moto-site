@@ -111,6 +111,10 @@
     margin: 0 0 32px 0;
     list-style: none;
   }
+  a:focused~ul{
+    
+  }
+
 
   ul {
     width: 80%;
@@ -163,6 +167,7 @@
 .MenuToggle input:checked~ul {
   transform: none;
 }
+
 
 .MenuToggle {
   display: none;

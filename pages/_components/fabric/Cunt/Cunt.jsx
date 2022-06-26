@@ -4,9 +4,10 @@ import nasway from './Cunt.module.scss'
 
 const Cunt = (props) => {
     return (
+        <div>
         <h3 className={nasway.Cunt}>
             {props.content}
-        </h3>
+        </h3></div>
     );
 };
 

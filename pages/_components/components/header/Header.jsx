@@ -7,15 +7,17 @@ import MsgIcon from "../../assets/MsgIcon.svg";
 import MessengerIcon from "../../assets/MessengerIcon.svg";
 import Burger from "./Burger";
 
-const Header = () => {
+const Header = ({env}) => {
+
+  console.log(process.env.DB_HOST)
   return (
     <div className={nasway.Header}>
       <img src={Logo.src} alt="Street Bike Мотошкола в Ростове-на-Дону" />
       <ul className={nasway.Nav}>
-        <a href="#">Главная</a>
-        <a href="#">Мотопарк</a>
-        <a href="#">Услуги</a>
-        <a href="#">Контакты</a>
+        <a href="#homepage">{process.env.DB_HOST}</a>
+        <a href="#motopark">Мотопарк</a>
+        <a href="#service">Услуги</a>
+        <a href="#contacts">Контакты</a>
       </ul>
       <ul className={nasway.Contacts}>
         <a href="#">

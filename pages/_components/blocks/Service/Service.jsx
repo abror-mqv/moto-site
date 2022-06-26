@@ -62,7 +62,7 @@ const renderList = newArr.map((course) => {
 
 const Service = () => {
   return (
-    <section className={nasway.Service}>
+    <section className={nasway.Service} id="service">
       <Cunt content="Услуги" />
       <div className={nasway.Courses}>{renderList}</div>
     </section>

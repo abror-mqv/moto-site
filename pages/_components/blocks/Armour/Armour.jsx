@@ -52,7 +52,7 @@ const Armour = () => {
   const size = useWindowSize();
 
   return (    
-    <section className={nasway.MainArmourSection}>
+    <section className={nasway.MainArmourSection} id="armour">
       <Cunt content="Защита" className={nasway.TopString}/>
       <div className={nasway.Armour}>
          <div className={nasway.ImageBlock}>

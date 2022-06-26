@@ -1,17 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
 
 .Cunt{
-    font-family: 'Montserrat';
+    font-family: 'Montserrat' !important;
     font-style: normal;
     font-weight: 800;
     font-size: 75px;
     line-height: 52px;
     color: #FFFFFF;
     opacity: 0.3;    
+    text-transform: uppercase;
 }
 
 @media  screen and (max-width: 920px) {
     .Cunt{
         font-size: 42px;
     }
-}
+}   

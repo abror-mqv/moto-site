@@ -1,8 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  async rewrites() {
+    return [
+      {
+        source: '/write',
+        destination: '/write',
+      },
+    ]
+  },
   reactStrictMode: true,
   images: {
-    loader: 'imgix',
+    loader: 'akamai',
     path: '',
   },
 }
