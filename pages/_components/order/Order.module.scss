@@ -3,16 +3,10 @@
   flex-direction: row-reverse;
   justify-content: space-between;
   justify-content: center;
-  max-width: 969px;
-  max-height: 578px;
-
   background: linear-gradient(318.07deg, #68b551 10.19%, #3ab177 92.37%);
   border-radius: 20px;
   max-height: 578px;
   align-items: center;
-  margin-top: 150px;
-   margin-left: 20%;//  Удолить параметр он нужет для отцентровке нижу при уменьшенном экране такой же параметр
-
   padding: 40px;
 
   .TextUnderButton {

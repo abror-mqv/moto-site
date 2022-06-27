@@ -32,7 +32,7 @@ function useWindowSize() {
   return windowSize;
 }
 
-const Order = () => {
+const Order = ({onClose}) => {
   const size = useWindowSize();
   return (
     <div className={nasway.Order}>
@@ -46,7 +46,7 @@ const Order = () => {
       </div>
 
       <div className={nasway.TxtBlock}>
-        <Title black content="ОСТАВЬТЕ ЗАЯВКУ" />
+        <Title black content="ОСТАВЬТЕ ЗАЯВКУ"/>
 
         <div className={nasway.SgeinKotokbas}>
           <SubText
@@ -79,6 +79,7 @@ const Order = () => {
                 <Field
                   id="phone"
                   name="phone"
+                  type="number"
                   placeholder="Ваш номер телефона"
                   className={nasway.inputValue}
                 />
@@ -90,6 +91,7 @@ const Order = () => {
                   className={nasway.inputValue}
                 />
                 <br />
+                
               </div>
 
               <Button text="ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ" />

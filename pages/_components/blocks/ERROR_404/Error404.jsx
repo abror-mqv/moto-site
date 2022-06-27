@@ -35,7 +35,7 @@ const Error404 = () => {
   return (
     <div className={nasway.Error404}>
       <div className={nasway.ImageBlock}>
-        <Image
+        <img
           src={size.width >= 920 ? Error404Big.src : Error404Small.src}
           alt="dsdddd"
           width={size.width >= 920 ? 569 : 372}
