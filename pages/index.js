@@ -6,10 +6,12 @@ import Header from './_components/components/header/Header'
 import Footer from './_components/components/footer/Footer'
 import Content from './_components/blocks/Content.jsx'
 
+import { cmsUrl } from './_components/glob'
+
 export default function Home({motopark, service}) {
   // console.log("Motopark: ",motopark)
   // console.log("Service: : ",service)
-
+  console.log(cmsUrl)
   return (
     <main className={styles.Home}>
       <Header/>

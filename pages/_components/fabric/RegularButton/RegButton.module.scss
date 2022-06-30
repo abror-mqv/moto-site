@@ -4,16 +4,16 @@
     width: 284px;
     height: 53px;
     background: linear-gradient(318.07deg, #68B551 10.19%, #3AB177 92.37%);
-    border-radius: 12px;
+    border-radius: 12px !important;
     font-family: 'Roboto';
     font-style: normal;
-    font-weight: 900;
-    font-size: 19px;
+    font-weight: 900 !important;
+    font-size: 19px !important;
     line-height: 22px;
 
     color: #23262B !important;
     z-index: 100;
-    transition: 0.1s;
+    transition: 0.1s !important;
 }
 
 .BuStyle:hover{

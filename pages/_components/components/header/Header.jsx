@@ -14,7 +14,7 @@ const Header = ({env}) => {
     <div className={nasway.Header}>
       <img src={Logo.src} alt="Street Bike Мотошкола в Ростове-на-Дону" />
       <ul className={nasway.Nav}>
-        <a href="#homepage">{process.env.DB_HOST}</a>
+        <a href="#homepage">Главная</a>
         <a href="#motopark">Мотопарк</a>
         <a href="#service">Услуги</a>
         <a href="#contacts">Контакты</a>
