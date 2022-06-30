@@ -87,7 +87,7 @@ const Motopark = ({posts}) => {
 
   const renderList = motosList.map((moto) => {
     return (
-      <SwiperSlide className={nasway.SwiperSlide}>
+      <SwiperSlide className={nasway.SwiperSlide} key={moto.title}> 
         {({ isActive }) => (
           <>
             {isActive ? setTitle((title) => moto.title) : null}

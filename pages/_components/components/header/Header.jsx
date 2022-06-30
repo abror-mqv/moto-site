@@ -8,8 +8,7 @@ import MessengerIcon from "../../assets/MessengerIcon.svg";
 import Burger from "./Burger";
 
 const Header = ({env}) => {
-
-  console.log(process.env.DB_HOST)
+  
   return (
     <div className={nasway.Header}>
       <img src={Logo.src} alt="Street Bike Мотошкола в Ростове-на-Дону" />

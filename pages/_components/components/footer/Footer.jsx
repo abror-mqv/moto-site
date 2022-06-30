@@ -8,7 +8,7 @@ import AGK from './assets/Agk.png'
 import VK from './assets/Vk.png'
 import IG from './assets/instagram.png'
 
-const Footer = () => {
+const Footer = ({props}) => {
     return (
         <footer className={nasway.footer} id="contacts">
         <div className={nasway.first__container}>
@@ -21,7 +21,7 @@ const Footer = () => {
                 <li>
                   <span className={nasway.number}
                     ><img src={Vector.src} alt="" />
-                    <a href="tel:+8 (800) 200-06-00"> 8 (800) 200-06-00</a></span>
+                    <a href="tel:+8 (800) 200-06-00"></a></span>
                   <span className={nasway.mail}
                     ><img src={Mail.src} alt="" />
                     <a href="mailto:inbox@streetbike.ru"> inbox@streetbike.ru</a>

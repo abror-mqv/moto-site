@@ -1,1 +1,0 @@
-export const cmsUrl = "http://192.168.0.107:1337/"
