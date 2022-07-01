@@ -47,7 +47,7 @@ let newArr = data.sort(function (a, b) {
 
 const renderList = newArr.map((course) => {
   return (
-    <div className={nasway.BGRAD} key={course.index}> 
+    <div className={nasway.BGRAD}>
       <Button className={nasway.Balc}>
         <img src={course.image.src} alt={course.title} />
         <div className={nasway.TextBlock}>

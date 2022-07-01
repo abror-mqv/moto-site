@@ -128,7 +128,7 @@
   color: #ffffff;
 }
 
-.footer__col_social > ul > li {
+.footer__col_social > ul > a > li{
   margin-bottom: 19px;  text-decoration: none;
   list-style: none;
 }
@@ -145,7 +145,7 @@
   gap: 8px;
 }
 
-.footer__col_social > ul > li > span > a {
+.footer__col_social > ul > a > li > span > a {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 300;
