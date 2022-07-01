@@ -19,7 +19,7 @@ const Footer = () => {
     const fetchData = async () =>{
       setLoading(true);
       try {
-        const {data: response} = await axios.get(`${BASE_URL}/api/street-bike-infos`);
+        const {data: response} = await axios.get(`${BASE_URL}/api/street-bike-info`);
         setData(response.data[0].attributes);
       } catch (error) {
         console.error(error.message);

@@ -21,10 +21,7 @@ import "swiper/css/effect-coverflow";
 import "swiper/css";
 import "swiper/css/pagination";
 
-import moto1 from "./assets/moto1.png";
-import moto2 from "./assets/moto2.png";
-import moto3 from "./assets/moto3.png";
-import moto4 from "./assets/moto4.png";
+const BASE_URL = "http://139.162.115.99:1337"
 
 function useWindowSize() {
   const [windowSize, setWindowSize] = useState({
@@ -47,64 +44,32 @@ function useWindowSize() {
   return windowSize;
 }
 
-const motosList = [
-  {
-    title: "YAMAHA XJ6",
-    description:
-      "Здесь должен быть какой то целевой текст который описывает класс техники и рассказывает кому и зачем подойдёт именно этот мотоцикл, коротко, ясно, простым языком, чтобы клиент понимал зачем.",
-    media: moto1,
-  },
-  {
-    title: "НАСВАЙww",
-    // title: "BSE 190",
-    description:
-      "Здесь должен быть какой то целевой текст который описывает класс техники и рассказывает кому и зачем подойдёт именно этот мотоцикл, коротко, ясно, простым языком, чтобы клиент понимал зачем.",
-    media: moto2,
-  },
-  {
-    title: "SYM XS 125",
-    description:
-      "Здесь должен быть какой то целевой текст который описывает класс техники и рассказывает кому и зачем подойдёт именно этот мотоцикл, коротко, ясно, простым языком, чтобы клиент понимал зачем.",
-    media: moto3,
-  },
-  {
-    title: "HONDA CB 125",
-    description:
-      "Здесь должен быть какой то целевой текст который описывает класс техники и рассказывает кому и зачем подойдёт именно этот мотоцикл, коротко, ясно, простым языком, чтобы клиент понимал зачем.",
-    media: moto4,
-  },
-];
-const Motopark = ({posts}) => {
-  const swiper = useSwiper();
+
+const Motopark = ({ posts }) => {
   useEffect(() => {
     window.addEventListener("resize", () => {
       console.log(window.innerHeight, window.innerWidth);
     });
   }, []);
-
   const size = useWindowSize();
   const [title, setTitle] = useState("");
 
-  const renderList = motosList.map((moto) => {
-    return (
-      <SwiperSlide className={nasway.SwiperSlide} key={moto.title}> 
-        {({ isActive }) => (
-          <>
-            {isActive ? setTitle((title) => moto.title) : null}
-            <Image
-              src={moto.media.src}
-              alt={moto.title}
-              width={350}
-              height={281}
-              className={isActive ? nasway.StockImage : nasway.GreyColoredImage}
-            />
-            <Title content={moto.title} />
-            <SubText content={moto.description} />
-          </>
-        )}
-      </SwiperSlide>
-    );
-  });
+  const [loading, setLoading] = useState(true)
+  const [data, setData] = useState([])
+
+  useEffect(() => {
+    const fetchData = async () =>{  
+      setLoading(true);
+      try {
+        const {data: response} = await axios.get(`${BASE_URL}/api/motopark`);
+        setData(response.data);
+      } catch (error) {
+        console.error(error.message);
+      }
+      setLoading(false);
+    }
+    fetchData();
+  }, []);
 
   return (
     <section className={nasway.Motopark} id="motopark">
@@ -118,10 +83,32 @@ const Motopark = ({posts}) => {
           effect={"coverflow"}
           grabCursor={true}
           loop="true"
-          modules={[Pagination]}
+          modules={[Pagination]}  
           slidesPerView={size.width >= 920 ? 3 : 1}
         >
-          {renderList}
+          {data.map((moto) => {
+            let motorender = moto.attributes
+            return (
+              <SwiperSlide className={nasway.SwiperSlide} key={moto.id}>
+                {({ isActive }) => (
+                  <>
+                    {isActive ? setTitle((title) => motorender.Title) : null}
+                    <Image
+                      src={`${BASE_URL}${motorender.image_url}`}
+                      alt={motorender.Title}
+                      width={350}
+                      height={281}
+                      className={
+                        isActive ? nasway.StockImage : nasway.GreyColoredImage
+                      }
+                    />
+                    <Title content={motorender.Title} />
+                    <SubText content={motorender.Description} />
+                  </>
+                )}
+              </SwiperSlide>
+            );
+          })}
           <div className={nasway.underTag}>
             <div className={nasway.UndeRug}>
               <SwiperButtonPrevious></SwiperButtonPrevious>
@@ -138,8 +125,3 @@ const Motopark = ({posts}) => {
 };
 
 export default Motopark;
-
-
-
-
-
