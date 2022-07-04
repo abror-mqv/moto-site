@@ -1,0 +1,39 @@
+.Gallery {
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    width: 82%;
+    margin-top: 40px;
+    .gridContainer {
+        columns: 5 270px;
+        column-gap: 15px;
+        margin: 0 auto;
+
+        img {
+            // max-width: 270px;
+            display: inline-block;
+            width: 100%;
+            border-radius: 15px;
+            transition: all .25s ease-in-out;
+            &:hover {
+                border-color: coral;
+            }
+            margin-top: 15px;
+        }
+    }
+}
+
+@media  screen and (max-width: 920px) {
+    .Gallery{ 
+        margin-top: 20px;
+        .gridContainer{
+            columns: 2;
+            ;
+            img{
+                min-width: 30px;
+                margin-bottom: 15px;
+            }
+        }
+
+    }
+}
