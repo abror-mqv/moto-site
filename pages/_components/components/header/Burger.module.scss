@@ -23,6 +23,9 @@
 .MenuToggle a:hover {
   color: #3AB177;
 }
+.MenuToggle a:hover~ul{
+  display: none;
+}
 
 
 .MenuToggle input {
@@ -114,9 +117,6 @@
     margin: 0 0 32px 0;
     list-style: none;
   }
-  a:focus~.Menu{
-    background-color: blue;
-  }
 
 
   ul {
@@ -167,14 +167,12 @@
 }
 
 
-.MenuToggle input:checked~ul {
-  transform: none;
-}
+// .MenuToggle input:checked~ul {
+//   transform: none;
+// }
 
 
-.MenuToggle {
-  display: none;
-}
+
 
 @media screen and (max-width: 920px) {
   .MenuToggle {
