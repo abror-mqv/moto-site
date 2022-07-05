@@ -82,6 +82,9 @@
   transform: rotate(-45deg) translate(0, -1px);
 }
 
+// .MenuToggle input:checked~.Menu{
+//   background-color: #3AB177;
+// }
 .Menu {
   position: fixed;
   display: flex;
@@ -111,8 +114,8 @@
     margin: 0 0 32px 0;
     list-style: none;
   }
-  a:focused~ul{
-    
+  a:focus~.Menu{
+    background-color: blue;
   }
 
 

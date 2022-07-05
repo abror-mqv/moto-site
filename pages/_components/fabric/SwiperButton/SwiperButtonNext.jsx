@@ -1,4 +1,5 @@
 import { useSwiper } from "swiper/react";
+import { useEffect } from "react";
 import nasway from "./SwiperButton.module.scss"
 import NextImg from './Next.png'
 

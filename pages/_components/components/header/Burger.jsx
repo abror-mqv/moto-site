@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-html-link-for-pages */
 import React from "react";
 import Image from "next/image";
 import nasway from "./Burger.module.scss";
@@ -28,7 +29,7 @@ const Burger = () => {
           
             <ul>
             <Image src={Logo.src} alt="Logo" width={198} height={47} className={nasway.BurgerLogo}/>
-              <a href="#" rel="noreferrer" className={nasway.UnderLogo}>
+              <a href="#service" rel="noreferrer" className={nasway.UnderLogo}>
                 <Image src={BookOpen.src} alt="Услуги" width={30} height={30} />
                 <li>Услуги</li>
               </a>
