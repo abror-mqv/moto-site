@@ -32,21 +32,26 @@ function useWindowSize() {
   return windowSize;
 }
 
-const Order = ({onClose}) => {
+const Order = ({ onClose, children }) => {
   const size = useWindowSize();
   return (
     <div className={nasway.Order}>
+      {children}
       <div className={nasway.ImageBlock}>
-        <Image
-          src={size.width >= 920 ? MotoQuestion.src : MotoQuestion2.src}
-          alt="dsdddd"
-          width={size.width >= 920 ? 504 : 346}
-          height={size.width >= 920 ? 491 : 332}
-        />
+        {size.width >= 920 ? (
+          <Image
+            src={size.width >= 920 ? MotoQuestion.src : MotoQuestion2.src}
+            alt="dsdddd"
+            width={504}
+            height={491}
+          />
+        ) : (
+          <span></span>
+        )}
       </div>
 
       <div className={nasway.TxtBlock}>
-        <Title black content="ОСТАВЬТЕ ЗАЯВКУ"/>
+        <Title black content="ОСТАВЬТЕ ЗАЯВКУ" />
 
         <div className={nasway.SgeinKotokbas}>
           <SubText
@@ -91,16 +96,16 @@ const Order = ({onClose}) => {
                   className={nasway.inputValue}
                 />
                 <br />
-                
               </div>
 
-              <Button text="ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ" />
+              <Button text="ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ"  />
               <br />
               <label className={nasway.TextUnderButton}>
                 Нажимая кнопку «Получить консультацию»», Вы даете
-                <br /> согласие на <a href="#"> обработку персональных данных</a> и принимаете
+                <br /> согласие на{" "}
+                <a href="#"> обработку персональных данных</a> и принимаете
                 <br />
-               <a href="#"> политику конфиденциальности.</a>
+                <a href="#"> политику конфиденциальности.</a>
               </label>
             </Form>
           </Formik>

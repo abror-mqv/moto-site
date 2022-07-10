@@ -70,8 +70,21 @@
     }   
 }
 
+.Cross{
+    align-self: flex-start;
+    cursor: pointer;
+}
+.Modal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 @media  screen and (max-width: 920px) {
+    .Modal{
+        align-items: flex-end;
+    }
     .Questions{
         flex-direction: column;
         margin-top: 30px;

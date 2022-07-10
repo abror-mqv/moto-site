@@ -5,9 +5,13 @@
   justify-content: center;
   background: linear-gradient(318.07deg, #68b551 10.19%, #3ab177 92.37%);
   border-radius: 20px;
-  max-height: 578px;
   align-items: center;
   padding: 40px;
+  width: 80%;
+  min-width: 800px;
+  margin: 0 auto;
+  
+  
 
   .TextUnderButton {
     padding-top: 10px;
@@ -100,19 +104,22 @@
 
 @media screen and (max-width: 920px) {
   .Order {
+
     flex-direction: column;
-    margin-top: 50%;
     margin-left: 0;//  Удолить параметр он нужен для обнуление верхнего параметра что бы мобильная версия не есздила
     gap: 20px;
     background: none;
     padding: 0;
+    // margin-bottom: 150px;
 
     .TxtBlock {
       background: linear-gradient(318.07deg, #68b551 10.19%, #3ab177 92.37%);
       padding: 40px;
       width: 100vw;
+      
       button {
         width: 100%;
+        margin-bottom: 10px;
       }
     }
   }
