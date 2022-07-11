@@ -1,5 +1,18 @@
 .Article{
     min-height: 95vh;
     display: flex;
+    width: 100vw;
     flex-direction: column;
+    .Categories{
+        width: 100%;
+        ul{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 35px;
+            button{
+                
+            }
+        }
+    }
 }

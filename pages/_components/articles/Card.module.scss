@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+
+.BuStyle {
+    width: 290px;
+    height: 127px;
+    background: linear-gradient(318.07deg, #68B551 10.19%, #3AB177 92.37%);
+    border-radius: 13px !important;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900 !important;
+    font-size: 19px !important;
+    line-height: 22px;
+
+    color: #23262B !important;
+    z-index: 100;
+    transition: 0.1s !important;
+}
+
+.BuStyle:hover{
+    transform: scale(102%);
+}
+
+.BuStyle:before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    height: calc(100% + 2px);
+    top: -1px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to bottom right, #ffffff 13%, #68B551 66% );
+    // transform: translate3d(0px, 0px, 0) scale(1.1);
+    transform: scale(102%);
+    filter: blur(0px);
+    opacity: var(1);
+    transition: opacity 0.3s;
+    border-radius: inherit;
+}
+.BuStyle::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: inherit;
+    border-radius: inherit;
+}
+
+
