@@ -1,43 +1,99 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap");
+@font-face {
+  font-family: "Bebas Neue";
+  src: local("Bebas Neue"),
+    url("../font/bebasneue/BebasNeueBold.ttf") format("truetype");
+  font-weight: bold;
+}
 
 .BuStyle {
-    width: 290px;
-    height: 127px;
-    background: linear-gradient(318.07deg, #68B551 10.19%, #3AB177 92.37%);
-    border-radius: 13px !important;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 900 !important;
-    font-size: 19px !important;
-    line-height: 22px;
+  width: 259px;
+  height: 127px;
+  background: linear-gradient(318.07deg, #68b551 10.19%, #3ab177 92.37%);
+  border-radius: 13px !important;
+  z-index: 100;
+  transition: 0.1s !important;
 
-    color: #23262B !important;
+  font-family: "Bebas Neue";
+  font-style: normal;
+  font-weight: 700 !important;
+  font-size: 29.3039px !important;
+  line-height: 29px;
+  color: #ffffff !important;
+}
+.Gray{
+    width: 259px;
+    height: 127px;  
+    background: #494949;
+    border-radius: 13px !important;
     z-index: 100;
     transition: 0.1s !important;
+  
+    font-family: "Bebas Neue";
+    font-style: normal;
+    font-weight: 700 !important;
+    font-size: 29.3039px !important;
+    line-height: 29px;
+    color: #ffffff !important;
+    img{
+        filter: grayscale(100%);
+    }
 }
-
-.BuStyle:hover{
+.BuStyle:hover {
+  transform: scale(101%);
+}
+.Gray:hover {
     transform: scale(102%);
-}
+    background: #494949 !important;
+
+  }
 
 .BuStyle:before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  height: calc(100% + 1px);
+  top: -1px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to bottom right, #ffffff 13%, #68b551 66%);
+  // transform: translate3d(0px, 0px, 0) scale(1.1);
+  transform: scale(101.2%);
+  filter: blur(0px);
+  opacity: var(1);
+  transition: opacity 0.3s;
+  border-radius: inherit;
+}
+.Gray:before {
     content: "";
     z-index: -1;
     position: absolute;
     height: calc(100% + 2px);
-    top: -1px;
+    top: -0.5px;
     right: 0;
     bottom: 0;
     left: 0;
-    background: linear-gradient(to bottom right, #ffffff 13%, #68B551 66% );
-    // transform: translate3d(0px, 0px, 0) scale(1.1);
-    transform: scale(102%);
+    background: linear-gradient(to bottom right, #ffffff 13%, #494949 66%);
+    transform: translate3d(0px, 0px, 0) scale(1.1);
+    transform: scale(101%);
     filter: blur(0px);
     opacity: var(1);
     transition: opacity 0.3s;
     border-radius: inherit;
-}
+  }
 .BuStyle::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: inherit;
+  border-radius: inherit;
+}
+.Gray::after {
     content: "";
     z-index: -1;
     position: absolute;
@@ -47,6 +103,5 @@
     left: 0;
     background: inherit;
     border-radius: inherit;
-}
-
-
+  }
+  

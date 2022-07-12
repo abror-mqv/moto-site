@@ -6,12 +6,41 @@
     .Categories{
         width: 100%;
         ul{
+            margin-top: 73px;
             width: 100%;
             display: flex;
             justify-content: center;
             gap: 35px;
+            .GrayCard{
+                background-color: tomato;
+            }
+            li{
+                list-style: none;
+            }
             button{
-                
+                display: flex;
+                justify-content: center;
+
+                img{
+                    z-index: 1;
+                    height: 119px;
+                    margin-bottom: -11px;
+                    position: absolute;
+                    left: 4px;
+                }
+                h3{
+                    border-radius: 18px 0 0 18px;
+                    width: 183px;
+                    height: 36px;
+                    background-color: #23262B;
+                    position: absolute;
+                    right: -4px;
+                    z-index: 0;
+                    padding-top: 8px;
+                    padding-left: 30px;
+                    font-size: 30px !important;
+                    font-weight: 700 !important;
+                }
             }
         }
     }

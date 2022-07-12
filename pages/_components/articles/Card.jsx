@@ -5,8 +5,9 @@ import nasway from "./Card.module.scss";
 
 
 
-const RegButton = ({children}) => {
-  return <Button className={nasway.BuStyle}>{children}</Button>;
+const RegButton = ({children, ...props}) => {
+  const elStyle = props.gray?nasway.Gray:nasway.BuStyle
+  return <Button className={elStyle}>{children}</Button>;
 };
 
 export default RegButton;
