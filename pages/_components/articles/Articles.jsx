@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { useRouter } from 'next/router'
 
 import RegButton from "../fabric/RegularButton/RegButton";
 import Card from "./Card";
@@ -18,6 +19,7 @@ const Articles = () => {
   const [cat, setCat] = useState(1);
   const [loading, setLoading] = useState(true);
   const [data, setData] = useState([]);
+  const router = useRouter()
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
@@ -35,7 +37,6 @@ const Articles = () => {
     };
     fetchData();
   }, []);
-  console.log("SSSTR", data[cat - 1]?.attributes?.statis.data);
   return (
     <section className={nasway.Article}>
       <div className={nasway.Categories}>
@@ -45,11 +46,11 @@ const Articles = () => {
             spaceBetween={30}
             className={nasway.Swiper}
             centeredSlides
-            initialSlide={3}
+            initialSlide={2}
           >
             {data[cat - 1]?.attributes?.statis.data.map((el) => {
               return (
-                <SwiperSlide className={nasway.SwiperSlide} style={{backgroundImage: `url(http://139.162.115.99:1337${el.attributes.PhotoURL})`, backgroundPosition: "cover"}}>
+                <SwiperSlide onClick={()=>{ router.push(`http://127.0.0.1:3000/articles/${el.id}`)}} className={nasway.SwiperSlide} style={{backgroundImage: `url(http://139.162.115.99:1337${el.attributes.PhotoURL})`, backgroundPosition: "cover"}}>
                   <h2>{el.attributes.PreviewTitle}</h2>
                 </SwiperSlide>
               );
