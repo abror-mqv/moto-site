@@ -40,28 +40,22 @@ const Articles = () => {
     <section className={nasway.Article}>
       <div className={nasway.Categories}>
         <article>
-          {data[cat - 1]?.attributes?.statis.data.map((el) => {
-            return (
-              <div className={nasway.SwiperSlide}>
-                <h2>{el.attributes.PreviewTitle}</h2>
-              </div>
-            );
-          })}
+          <Swiper
+            slidesPerView={"auto"}
+            spaceBetween={30}
+            className={nasway.Swiper}
+            centeredSlides
+            initialSlide={3}
+          >
+            {data[cat - 1]?.attributes?.statis.data.map((el) => {
+              return (
+                <SwiperSlide className={nasway.SwiperSlide} style={{backgroundImage: `url(http://139.162.115.99:1337${el.attributes.PhotoURL})`, backgroundPosition: "cover"}}>
+                  <h2>{el.attributes.PreviewTitle}</h2>
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
         </article>
-        <Swiper
-          slidesPerView={"auto"}
-          spaceBetween={30}
-          pagination={{
-            clickable: true,
-          }}
-          modules={[Pagination]}
-          className="mySwiper"
-        >
-          <SwiperSlide>Slide 1</SwiperSlide>
-          <SwiperSlide>Slide 2</SwiperSlide>
-          <SwiperSlide>Slide 3</SwiperSlide>
-
-        </Swiper>
         <ul>
           {data.map((el) => {
             if (cat == el.id) {
