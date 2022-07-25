@@ -3,11 +3,12 @@ import axios from "axios";
 import { useRouter } from 'next/router'
 
 import RegButton from "../fabric/RegularButton/RegButton";
-import Card from "./Card";
+import Card from './Card'
 import nasway from "./Articles.module.scss";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import SwiperButtonPrevious from "../fabric/SwiperButton/SwiperButtonPrevious";
+import SwiperButtonNext from "../fabric/SwiperButton/SwiperButtonNext";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
@@ -46,47 +47,77 @@ const Articles = () => {
             spaceBetween={30}
             className={nasway.Swiper}
             centeredSlides
-            initialSlide={2}
+            initialSlide={1}
           >
             {data[cat - 1]?.attributes?.statis.data.map((el) => {
               return (
-                <SwiperSlide onClick={()=>{ router.push(`http://127.0.0.1:3000/articles/${el.id}`)}} className={nasway.SwiperSlide} style={{backgroundImage: `url(http://139.162.115.99:1337${el.attributes.PhotoURL})`, backgroundPosition: "cover"}}>
+                <SwiperSlide key={el.id} onClick={()=>{ router.push(`http://127.0.0.1:3000/articles/singular-article/?id=${el.id}`)}} className={nasway.SwiperSlide} style={{backgroundImage: `url(http://139.162.115.99:1337${el.attributes.PhotoURL})`, backgroundSize: "cover"}}>
                   <h2>{el.attributes.PreviewTitle}</h2>
+                  <RegButton text="Подробнее"/>
                 </SwiperSlide>
               );
             })}
           </Swiper>
         </article>
         <ul>
+        <Swiper
+            slidesPerView={"auto"}
+            spaceBetween={30}
+            className={nasway.CatSwiper}
+            centeredSlides
+            initialSlide={2}
+            
+          >
+            <SwiperButtonPrevious ></SwiperButtonPrevious>
           {data.map((el) => {
             if (cat == el.id) {
               return (
-                <li onClick={() => setCat(el.id)}>
+                <SwiperSlide className={nasway.CatSwiperSlide} onClick={() => setCat(el.id)} key={el.id}>
                   <Card>
                     <img
                       src={`http://139.162.115.99:1337${el.attributes.ImageURL}`}
+                      loading="lazy"
                     />
                     <h3>{el.attributes.Title}</h3>
                   </Card>
-                </li>
+                </SwiperSlide>
               );
             } else {
               return (
-                <li onClick={() => setCat(el.id)}>
+                <SwiperSlide className={nasway.CatSwiperSlide} onClick={() => setCat(el.id)} key={el.id}>
                   <Card gray>
                     <img
                       src={`http://139.162.115.99:1337${el.attributes.ImageURL}`}
+                      loading="lazy"
                     />
                     <h3>{el.attributes.Title}</h3>
                   </Card>
-                </li>
+                </SwiperSlide>
               );
             }
           })}
+              
+              <SwiperButtonNext ></SwiperButtonNext>
+          </Swiper>
         </ul>
+        <div className={nasway.SwadowGenerator}></div>
+        <div className={nasway.Street}></div>
+        <div style={{marginTop: 168}}></div>
+        <section className={nasway.ResArtcls}>
+        {data[cat - 1]?.attributes?.statis.data.map((el) => {
+              return (
+                <div key={el.id} onClick={()=>{ router.push(`http://127.0.0.1:3000/articles/singular-article/?id=${el.id}`)}} className={nasway.SwiperSlide} style={{backgroundImage: `url(http://139.162.115.99:1337${el.attributes.PhotoURL})`, backgroundSize: "cover"}}>
+                  <h2>{el.attributes.PreviewTitle}</h2>
+                </div>
+              );
+            })}
+        </section>
+        <div className={nasway.BottomShadow}></div>
       </div>
     </section>
   );
 };
 
 export default Articles;
+
+

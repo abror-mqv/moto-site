@@ -31,7 +31,7 @@ const Burger = () => {
           <ul className={nasway.Menu} style={{ transform: (close ? "none": "translate(100%, 0)")}}>
           
             <ul>
-            <Image src={Logo.src} alt="Logo" width={198} height={47} className={nasway.BurgerLogo}/>
+            <Image src={Logo.src} alt="Logo" width={198} height={47} className={nasway.BurgerLogo} />
               <a href="#service" rel="noreferrer" className={nasway.UnderLogo} onClick={()=>{setClose(close === false)}}>
                 <Image src={BookOpen.src} alt="Услуги" width={30} height={30} />
                 <li>Услуги</li>

@@ -11,7 +11,7 @@ const Header = ({env}) => {
   
   return (
     <div className={nasway.Header}>
-      <img src={Logo.src} alt="Street Bike Мотошкола в Ростове-на-Дону" />
+      <img src={Logo.src} alt="Street Bike Мотошкола в Ростове-на-Дону" style={{zIndex: "11"}}/>
       <ul className={nasway.Nav}>
         <a href="http://streetbike161.ru/#homepage">Главная</a>
         <a href="http://streetbike161.ru/#motopark">Мотопарк</a>

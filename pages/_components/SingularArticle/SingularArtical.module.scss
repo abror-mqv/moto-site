@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap");
+
+
+.Singular img{
+  max-width: 82%;
+}
+
+.Singular {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 0 9% 0 9%;
+  align-items: center;
+  article {
+    p {
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 300;
+      font-size: 25px;
+      line-height: 29px;
+      color: #ffffff;
+      margin-bottom: 30px;
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+        align-items: center;      
+    }
+    h2 {
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 47px;
+      color: #ffffff
+    }
+  }
+}
+
+
+.SAFooter{
+  margin-top: 80px;
+  margin-bottom: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 104%;
+  flex-wrap: wrap;
+  ul{
+    display: flex;
+    gap: 30px
+  }
+  a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 21px;
+line-height: 25px;
+/* identical to box height */
+
+
+color: #FFFFFF;
+  }
+}
+
+.SAFooterR{
+  display: none;
+}
+@media screen and (max-width: 920px){
+  .SAFooter{
+    display: none !important;
+  }
+  .SAFooterR{
+    display: block !important;
+  }
+}

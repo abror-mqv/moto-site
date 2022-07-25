@@ -13,7 +13,7 @@
 
 .Articles::before{
     content: "";
-    position: absolute;
+    position: fixed;
     left: 0;
     width: 35vw;
     height: 100%;
@@ -22,7 +22,7 @@
 }
 .Articles::after{
     content: "";
-    position: absolute;
+    position: fixed;
     right: 0;
     width: 35vw;
     height: 100%;
@@ -36,6 +36,26 @@
 }
 
 @media  screen and (max-width: 920px){
+    .Articles::before{
+        content: "";
+        position: fixed;
+        left: 0;
+        width: 0 !important;
+        box-shadow: 100px 0px 48px -38px rgba(0, 0, 0, 0.5) inset;
+        z-index: 9;
+    }
+    .Articles footer{
+            margin-top: 30% !important;
+        }
+    
+    .Articles::after{
+        content: "";
+        position: fixed;
+        right: 0;
+        width: 0 !important;
+        box-shadow: -100px 0px 48px -38px rgba(0, 0, 0, 0.5) inset;
+        z-index: 9;
+    }
     .headerVisible{
         display: block;
     }

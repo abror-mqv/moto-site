@@ -1,3 +1,24 @@
-.About{
-    min-height: 90vh;
+.About {
+  min-height: 90vh;
+  width: 82%;
+  margin-top: 60px;
+  h4 {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 35px;
+    color: #ffffff;
+    margin-bottom: 30px;
+  }
+  p{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 21px;
+    line-height: 25px;
+    color: #FFFFFF;
+    margin-bottom: 26px;
+  }
 }
+

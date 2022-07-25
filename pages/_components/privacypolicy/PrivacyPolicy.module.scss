@@ -1,0 +1,32 @@
+.PP {
+    width: 82%;
+
+  p {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 21px;
+    line-height: 25px;
+    color: #ffffff;
+    margin-bottom: 30px;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+      align-items: center;   
+      list-style: none;
+  }
+  h4 {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 35px;
+
+    color: #ffffff;
+    margin-top: 60px;
+    margin-bottom: 30px;
+  }
+}

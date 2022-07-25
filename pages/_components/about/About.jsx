@@ -2,6 +2,8 @@ import React from "react";
 import axios from 'axios'
 import { useState, useEffect } from "react";
 import nasway from "./About.module.scss";
+import ReactMarkdown from "react-markdown";
+
 const BASE_URL = "http://139.162.115.99:1337";
 const About = () => {
   const [loading, setLoading] = useState(true);
@@ -23,7 +25,6 @@ const About = () => {
   return (
     <section className={nasway.About}>
       <h4>О компании</h4>
-      <p>{data}</p>
     </section>
   );
 };
